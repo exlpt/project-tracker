@@ -1,3 +1,5 @@
+import ProjectList from "../components/projectsPage/ProjectList";
+
 import tempLogo from "../assets/images/temp_logo.png";
 
 export default function ProjectsPage() {
@@ -9,6 +11,8 @@ export default function ProjectsPage() {
 			</div>
 
 			<h1>Your Projects</h1>
+
+			<ProjectList />
 		</div>
 	);
 }
