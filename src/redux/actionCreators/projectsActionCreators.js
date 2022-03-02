@@ -10,3 +10,12 @@ export function addProject(title, themeColor, bannerImage, deadline, hourGoal) {
 		},
   };
 }
+
+export function deleteProject(projectId) {
+	return {
+		type: "PROJECTS_DELETE_PROJECT",
+		payload: {
+			projectId
+		}
+	}
+}

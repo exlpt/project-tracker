@@ -39,6 +39,19 @@ export default function projectsReducer(state = {}, action) {
 			};
 		}
 
+		case "PROJECTS_DELETE_PROJECT": {
+			const newState = {};
+
+			const projectIds = Object.keys(state);
+			for (let projectId of projectIds) {
+				if (projectId !== action.payload.projectId) {
+					newState[projectId] = { ...state[projectId] }
+				}
+			}
+			
+			return newState;
+		}
+
     default: {
       return { ...state };
     }
