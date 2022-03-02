@@ -23,3 +23,5 @@ yarn-debug.log*
 yarn-error.log*
 
 .TODO
+.component-tree
+.store-tree
