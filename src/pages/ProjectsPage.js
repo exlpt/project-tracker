@@ -1,4 +1,5 @@
-import ProjectList from "../components/projectsPage/ProjectList";
+import ProjectList from "../components/projectsPage/ProjectList.js";
+import AddEditProject from "../components/projectsPage/AddEditProject.js";
 
 import tempLogo from "../assets/images/temp_logo.png";
 
@@ -11,6 +12,8 @@ export default function ProjectsPage() {
 			</div>
 
 			<h1>Your Projects</h1>
+
+			<AddEditProject />
 
 			<ProjectList />
 		</div>

@@ -1,6 +1,7 @@
 import { useSelector, useDispatch } from "react-redux";
 
 import * as projectsActions from "../../redux/actionCreators/projectsActionCreators.js";
+import * as addEditProjectActions from "../../redux/actionCreators/addEditProjectActionCreators.js";
 
 export default function Project(props) {
   const dispatch = useDispatch();
@@ -8,7 +9,13 @@ export default function Project(props) {
 
   function deleteThisProject() {
     dispatch(projectsActions.deleteProject(props.projectId));
+		dispatch(addEditProjectActions.setProject(null));
   }
+	
+	function setAddEditProjectProjectId() {
+		dispatch(addEditProjectActions.setProject(props.projectId));
+		dispatch(addEditProjectActions.setMode("edit"));
+	}
 
   return (
     <div>
@@ -19,7 +26,7 @@ export default function Project(props) {
       </div>
 
       <div>
-        <button onClick={() => {}}>Edit</button>
+        <button onClick={setAddEditProjectProjectId}>Edit</button>
         <button onClick={deleteThisProject}>Delete</button>
       </div>
     </div>
