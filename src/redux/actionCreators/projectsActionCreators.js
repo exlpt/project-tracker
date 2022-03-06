@@ -19,3 +19,14 @@ export function deleteProject(projectId) {
 		}
 	}
 }
+
+export function addSplit(projectId, splitName, splitColor) {
+	return {
+		type: "PROJECTS_ADD_SPLIT",
+		payload: {
+			projectId,
+			splitName,
+			splitColor
+		}
+	};
+}
