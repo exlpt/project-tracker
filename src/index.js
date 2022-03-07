@@ -22,9 +22,12 @@ tempProjects.forEach((project) => {
   );
 });
 
-store.dispatch(
-  projectEditorActions.setProjectId(Object.keys(store.getState().projects)[0])
-);
+const defaultProjectId = Object.keys(store.getState().projects)[0];
+const defaultWeekId = Object.keys(
+  store.getState().projects[defaultProjectId].weeks
+)[0];
+store.dispatch(projectEditorActions.setProjectId(defaultProjectId));
+store.dispatch(projectEditorActions.setWeekId(defaultWeekId));
 
 ReactDOM.render(
   <Provider store={store}>

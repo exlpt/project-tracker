@@ -2,6 +2,7 @@ import { useSelector } from "react-redux";
 
 import Timer from "../components/projectEditor/Timer.js";
 import Splits from "../components/projectEditor/Splits.js";
+import WeekList from "../components/projectEditor/WeekList.js";
 
 export default function ProjectEditorPage() {
   const projectId = useSelector(
@@ -34,6 +35,8 @@ export default function ProjectEditorPage() {
 			<h3></h3>
 
 			<Splits />
+
+			<WeekList />
     </div>
   );
 }

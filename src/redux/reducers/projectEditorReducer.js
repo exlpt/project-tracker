@@ -10,6 +10,13 @@ export default function projectEditorReducer(
 			}
 		}
 
+		case "PROJECT_EDITOR_SET_WEEK_ID": {
+			return {
+				...state,
+				selectedWeekId: action.payload.weekId
+			}
+		}
+
     default: {
       return { ...state };
     }

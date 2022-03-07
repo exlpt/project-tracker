@@ -1,0 +1,22 @@
+.weekList_container {
+	width: 55vw;
+	height: 75vh;
+
+	position: absolute;
+	right: 0;
+	top: 0;
+
+	margin-top: 1rem;
+	margin-right: 1rem;
+
+	border: 1px solid black;
+}
+
+.weekList_daysContainer {
+	border: 1px solid black;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+
+	height: 80px;
+}

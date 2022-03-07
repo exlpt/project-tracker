@@ -16,8 +16,8 @@ export const tempProjects = [
     ],
 
     weeks: {
-      1: {
-				sunday: [
+      1: [
+				[
 					{
 						name: "Apprenticeship",
 						time: 4,
@@ -36,7 +36,7 @@ export const tempProjects = [
 					},
 				],
 				
-				monday: [
+				[
 					{
 						name: "Apprenticeship",
 						time: 4,
@@ -55,7 +55,7 @@ export const tempProjects = [
 					},
 				],
 
-				tuesday: [
+				[
 					{
 						name: "Apprenticeship",
 						time: 4,
@@ -74,7 +74,7 @@ export const tempProjects = [
 					},
 				],
 
-				wednesday: [
+				[
 					{
 						name: "Apprenticeship",
 						time: 4,
@@ -93,7 +93,7 @@ export const tempProjects = [
 					},
 				],
 
-				thursday: [
+				[
 					{
 						name: "Apprenticeship",
 						time: 4,
@@ -112,7 +112,7 @@ export const tempProjects = [
 					},
 				],
 
-				friday: [
+				[
 					{
 						name: "Apprenticeship",
 						time: 4,
@@ -131,7 +131,7 @@ export const tempProjects = [
 					},
 				],
 
-				saturday: [
+				[
 					{
 						name: "Apprenticeship",
 						time: 4,
@@ -149,10 +149,10 @@ export const tempProjects = [
 						time: 0.5,
 					},
 				],
-      },
+			],
 
-			2: {
-				sunday: [
+			2: [
+				[
 					{
 						name: "Apprenticeship",
 						time: 4,
@@ -171,7 +171,7 @@ export const tempProjects = [
 					},
 				],
 				
-				monday: [
+				[
 					{
 						name: "Apprenticeship",
 						time: 4,
@@ -190,7 +190,7 @@ export const tempProjects = [
 					},
 				],
 
-				tuesday: [
+				[
 					{
 						name: "Apprenticeship",
 						time: 4,
@@ -209,7 +209,7 @@ export const tempProjects = [
 					},
 				],
 
-				wednesday: [
+				[
 					{
 						name: "Apprenticeship",
 						time: 4,
@@ -228,7 +228,7 @@ export const tempProjects = [
 					},
 				],
 
-				thursday: [
+				[
 					{
 						name: "Apprenticeship",
 						time: 4,
@@ -247,7 +247,7 @@ export const tempProjects = [
 					},
 				],
 
-				friday: [
+				[
 					{
 						name: "Apprenticeship",
 						time: 4,
@@ -266,7 +266,7 @@ export const tempProjects = [
 					},
 				],
 
-				saturday: [
+				[
 					{
 						name: "Apprenticeship",
 						time: 4,
@@ -284,10 +284,10 @@ export const tempProjects = [
 						time: 0.5,
 					},
 				],
-      },
+			],
 
-      3: {
-				sunday: [
+			3: [
+				[
 					{
 						name: "Apprenticeship",
 						time: 4,
@@ -306,7 +306,7 @@ export const tempProjects = [
 					},
 				],
 				
-				monday: [
+				[
 					{
 						name: "Apprenticeship",
 						time: 4,
@@ -325,7 +325,7 @@ export const tempProjects = [
 					},
 				],
 
-				tuesday: [
+				[
 					{
 						name: "Apprenticeship",
 						time: 4,
@@ -344,7 +344,7 @@ export const tempProjects = [
 					},
 				],
 
-				wednesday: [
+				[
 					{
 						name: "Apprenticeship",
 						time: 4,
@@ -363,7 +363,7 @@ export const tempProjects = [
 					},
 				],
 
-				thursday: [
+				[
 					{
 						name: "Apprenticeship",
 						time: 4,
@@ -382,7 +382,7 @@ export const tempProjects = [
 					},
 				],
 
-				friday: [
+				[
 					{
 						name: "Apprenticeship",
 						time: 4,
@@ -401,7 +401,7 @@ export const tempProjects = [
 					},
 				],
 
-				saturday: [
+				[
 					{
 						name: "Apprenticeship",
 						time: 4,
@@ -419,10 +419,10 @@ export const tempProjects = [
 						time: 0.5,
 					},
 				],
-      },
+			],
 
-			4: {
-				sunday: [
+			4: [
+				[
 					{
 						name: "Apprenticeship",
 						time: 4,
@@ -441,7 +441,7 @@ export const tempProjects = [
 					},
 				],
 				
-				monday: [
+				[
 					{
 						name: "Apprenticeship",
 						time: 4,
@@ -460,7 +460,7 @@ export const tempProjects = [
 					},
 				],
 
-				tuesday: [
+				[
 					{
 						name: "Apprenticeship",
 						time: 4,
@@ -479,7 +479,7 @@ export const tempProjects = [
 					},
 				],
 
-				wednesday: [
+				[
 					{
 						name: "Apprenticeship",
 						time: 4,
@@ -498,7 +498,7 @@ export const tempProjects = [
 					},
 				],
 
-				thursday: [
+				[
 					{
 						name: "Apprenticeship",
 						time: 4,
@@ -517,7 +517,7 @@ export const tempProjects = [
 					},
 				],
 
-				friday: [
+				[
 					{
 						name: "Apprenticeship",
 						time: 4,
@@ -536,7 +536,7 @@ export const tempProjects = [
 					},
 				],
 
-				saturday: [
+				[
 					{
 						name: "Apprenticeship",
 						time: 4,
@@ -554,7 +554,142 @@ export const tempProjects = [
 						time: 0.5,
 					},
 				],
-      },
+			],
+
+			5: [
+				[
+					{
+						name: "Apprenticeship",
+						time: 4,
+					},
+					{
+						name: "Science",
+						time: 1.75,
+					},
+					{
+						name: "Math",
+						time: 1,
+					},
+					{
+						name: "History",
+						time: 0.5,
+					},
+				],
+				
+				[
+					{
+						name: "Apprenticeship",
+						time: 4,
+					},
+					{
+						name: "Science",
+						time: 1.75,
+					},
+					{
+						name: "Math",
+						time: 1,
+					},
+					{
+						name: "History",
+						time: 0.5,
+					},
+				],
+
+				[
+					{
+						name: "Apprenticeship",
+						time: 4,
+					},
+					{
+						name: "Science",
+						time: 1.75,
+					},
+					{
+						name: "Math",
+						time: 1,
+					},
+					{
+						name: "History",
+						time: 0.5,
+					},
+				],
+
+				[
+					{
+						name: "Apprenticeship",
+						time: 4,
+					},
+					{
+						name: "Science",
+						time: 1.75,
+					},
+					{
+						name: "Math",
+						time: 1,
+					},
+					{
+						name: "History",
+						time: 0.5,
+					},
+				],
+
+				[
+					{
+						name: "Apprenticeship",
+						time: 4,
+					},
+					{
+						name: "Science",
+						time: 1.75,
+					},
+					{
+						name: "Math",
+						time: 1,
+					},
+					{
+						name: "History",
+						time: 0.5,
+					},
+				],
+
+				[
+					{
+						name: "Apprenticeship",
+						time: 4,
+					},
+					{
+						name: "Science",
+						time: 1.75,
+					},
+					{
+						name: "Math",
+						time: 1,
+					},
+					{
+						name: "History",
+						time: 0.5,
+					},
+				],
+
+				[
+					{
+						name: "Apprenticeship",
+						time: 4,
+					},
+					{
+						name: "Science",
+						time: 1.75,
+					},
+					{
+						name: "Math",
+						time: 1,
+					},
+					{
+						name: "History",
+						time: 0.5,
+					},
+				],
+			],
     },
   },
 ];
