@@ -3,9 +3,9 @@ export const tempProjects = [
     title: "School",
     themeColor: "#fc803d",
     bannerImage: "",
+    deadline: "3-8-2022",
     startDate: "2022-1-18",
-    deadline: "2022-03-31",
-    hourGoal: "308",
+    hourGoal: 308,
 
     totalTime: 197.75,
 
