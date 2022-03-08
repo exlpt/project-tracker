@@ -1,4 +1,5 @@
 import { nanoid } from "nanoid";
+import { useState } from "react";
 
 export default function projectsReducer(state = {}, action) {
   switch (action.type) {
@@ -55,6 +56,35 @@ export default function projectsReducer(state = {}, action) {
           { name: action.payload.splitName, time: 0 },
         ]);
       }
+
+      return newState;
+    }
+
+    case "PROJECTS_ADD_WEEK": {
+      const newProject = { ...state[action.payload.projectId] };
+
+      newProject.weeks[nanoid()] = [
+        JSON.parse(JSON.stringify(action.payload.defaultWeekSplits)),
+        JSON.parse(JSON.stringify(action.payload.defaultWeekSplits)),
+        JSON.parse(JSON.stringify(action.payload.defaultWeekSplits)),
+        JSON.parse(JSON.stringify(action.payload.defaultWeekSplits)),
+        JSON.parse(JSON.stringify(action.payload.defaultWeekSplits)),
+        JSON.parse(JSON.stringify(action.payload.defaultWeekSplits)),
+        JSON.parse(JSON.stringify(action.payload.defaultWeekSplits)),
+      ];
+
+      return { ...state, [action.payload.projectId]: newProject };
+    }
+
+    case "PROJECTS_SET_SPLIT_TIME": {
+      const newState = { ...state };
+
+      newState[action.payload.projectId].weeks[action.payload.weekId][
+        action.payload.dayIndex
+      ].forEach((split) => {
+        if (split.name !== action.payload.splitName) return;
+        split.time = action.payload.time;
+      });
 
       return newState;
     }

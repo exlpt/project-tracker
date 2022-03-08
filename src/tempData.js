@@ -6,690 +6,688 @@ export const tempProjects = [
     deadline: "3-8-2022",
     hourGoal: 308,
 
-    totalTime: 197.75,
-
     projectSplits: [
-			"Apprenticeship",
-      "Science",
-      "Math",
-      "History",
+      { name: "Apprenticeship", color: "#FF0000" },
+      { name: "Science", color: "#00FF00" },
+      { name: "Math", color: "#0000FF" },
+      { name: "History", color: "#00DDDD" },
     ],
 
     weeks: {
-      1: [
-				[
-					{
-						name: "Apprenticeship",
-						time: 4,
-					},
-					{
-						name: "Science",
-						time: 1.75,
-					},
-					{
-						name: "Math",
-						time: 1,
-					},
-					{
-						name: "History",
-						time: 0.5,
-					},
-				],
-				
-				[
-					{
-						name: "Apprenticeship",
-						time: 4,
-					},
-					{
-						name: "Science",
-						time: 1.75,
-					},
-					{
-						name: "Math",
-						time: 1,
-					},
-					{
-						name: "History",
-						time: 0.5,
-					},
-				],
+      0: [
+        [
+          {
+            name: "Apprenticeship",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "Science",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "Math",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "History",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+        ],
 
-				[
-					{
-						name: "Apprenticeship",
-						time: 4,
-					},
-					{
-						name: "Science",
-						time: 1.75,
-					},
-					{
-						name: "Math",
-						time: 1,
-					},
-					{
-						name: "History",
-						time: 0.5,
-					},
-				],
+        [
+          {
+            name: "Apprenticeship",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "Science",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "Math",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "History",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+        ],
 
-				[
-					{
-						name: "Apprenticeship",
-						time: 4,
-					},
-					{
-						name: "Science",
-						time: 1.75,
-					},
-					{
-						name: "Math",
-						time: 1,
-					},
-					{
-						name: "History",
-						time: 0.5,
-					},
-				],
+        [
+          {
+            name: "Apprenticeship",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "Science",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "Math",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "History",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+        ],
 
-				[
-					{
-						name: "Apprenticeship",
-						time: 4,
-					},
-					{
-						name: "Science",
-						time: 1.75,
-					},
-					{
-						name: "Math",
-						time: 1,
-					},
-					{
-						name: "History",
-						time: 0.5,
-					},
-				],
+        [
+          {
+            name: "Apprenticeship",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "Science",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "Math",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "History",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+        ],
 
-				[
-					{
-						name: "Apprenticeship",
-						time: 4,
-					},
-					{
-						name: "Science",
-						time: 1.75,
-					},
-					{
-						name: "Math",
-						time: 1,
-					},
-					{
-						name: "History",
-						time: 0.5,
-					},
-				],
+        [
+          {
+            name: "Apprenticeship",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "Science",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "Math",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "History",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+        ],
 
-				[
-					{
-						name: "Apprenticeship",
-						time: 4,
-					},
-					{
-						name: "Science",
-						time: 1.75,
-					},
-					{
-						name: "Math",
-						time: 1,
-					},
-					{
-						name: "History",
-						time: 0.5,
-					},
-				],
-			],
+        [
+          {
+            name: "Apprenticeship",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "Science",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "Math",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "History",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+        ],
+
+        [
+          {
+            name: "Apprenticeship",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "Science",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "Math",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "History",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+        ],
+      ],
+
+			1: [
+        [
+          {
+            name: "Apprenticeship",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "Science",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "Math",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "History",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+        ],
+
+        [
+          {
+            name: "Apprenticeship",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "Science",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "Math",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "History",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+        ],
+
+        [
+          {
+            name: "Apprenticeship",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "Science",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "Math",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "History",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+        ],
+
+        [
+          {
+            name: "Apprenticeship",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "Science",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "Math",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "History",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+        ],
+
+        [
+          {
+            name: "Apprenticeship",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "Science",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "Math",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "History",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+        ],
+
+        [
+          {
+            name: "Apprenticeship",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "Science",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "Math",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "History",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+        ],
+
+        [
+          {
+            name: "Apprenticeship",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "Science",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "Math",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "History",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+        ],
+      ],
 
 			2: [
-				[
-					{
-						name: "Apprenticeship",
-						time: 4,
-					},
-					{
-						name: "Science",
-						time: 1.75,
-					},
-					{
-						name: "Math",
-						time: 1,
-					},
-					{
-						name: "History",
-						time: 0.5,
-					},
-				],
-				
-				[
-					{
-						name: "Apprenticeship",
-						time: 4,
-					},
-					{
-						name: "Science",
-						time: 1.75,
-					},
-					{
-						name: "Math",
-						time: 1,
-					},
-					{
-						name: "History",
-						time: 0.5,
-					},
-				],
+        [
+          {
+            name: "Apprenticeship",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "Science",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "Math",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "History",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+        ],
 
-				[
-					{
-						name: "Apprenticeship",
-						time: 4,
-					},
-					{
-						name: "Science",
-						time: 1.75,
-					},
-					{
-						name: "Math",
-						time: 1,
-					},
-					{
-						name: "History",
-						time: 0.5,
-					},
-				],
+        [
+          {
+            name: "Apprenticeship",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "Science",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "Math",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "History",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+        ],
 
-				[
-					{
-						name: "Apprenticeship",
-						time: 4,
-					},
-					{
-						name: "Science",
-						time: 1.75,
-					},
-					{
-						name: "Math",
-						time: 1,
-					},
-					{
-						name: "History",
-						time: 0.5,
-					},
-				],
+        [
+          {
+            name: "Apprenticeship",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "Science",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "Math",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "History",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+        ],
 
-				[
-					{
-						name: "Apprenticeship",
-						time: 4,
-					},
-					{
-						name: "Science",
-						time: 1.75,
-					},
-					{
-						name: "Math",
-						time: 1,
-					},
-					{
-						name: "History",
-						time: 0.5,
-					},
-				],
+        [
+          {
+            name: "Apprenticeship",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "Science",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "Math",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "History",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+        ],
 
-				[
-					{
-						name: "Apprenticeship",
-						time: 4,
-					},
-					{
-						name: "Science",
-						time: 1.75,
-					},
-					{
-						name: "Math",
-						time: 1,
-					},
-					{
-						name: "History",
-						time: 0.5,
-					},
-				],
+        [
+          {
+            name: "Apprenticeship",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "Science",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "Math",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "History",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+        ],
 
-				[
-					{
-						name: "Apprenticeship",
-						time: 4,
-					},
-					{
-						name: "Science",
-						time: 1.75,
-					},
-					{
-						name: "Math",
-						time: 1,
-					},
-					{
-						name: "History",
-						time: 0.5,
-					},
-				],
-			],
+        [
+          {
+            name: "Apprenticeship",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "Science",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "Math",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "History",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+        ],
+
+        [
+          {
+            name: "Apprenticeship",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "Science",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "Math",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "History",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+        ],
+      ],
 
 			3: [
-				[
-					{
-						name: "Apprenticeship",
-						time: 4,
-					},
-					{
-						name: "Science",
-						time: 1.75,
-					},
-					{
-						name: "Math",
-						time: 1,
-					},
-					{
-						name: "History",
-						time: 0.5,
-					},
-				],
-				
-				[
-					{
-						name: "Apprenticeship",
-						time: 4,
-					},
-					{
-						name: "Science",
-						time: 1.75,
-					},
-					{
-						name: "Math",
-						time: 1,
-					},
-					{
-						name: "History",
-						time: 0.5,
-					},
-				],
+        [
+          {
+            name: "Apprenticeship",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "Science",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "Math",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "History",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+        ],
 
-				[
-					{
-						name: "Apprenticeship",
-						time: 4,
-					},
-					{
-						name: "Science",
-						time: 1.75,
-					},
-					{
-						name: "Math",
-						time: 1,
-					},
-					{
-						name: "History",
-						time: 0.5,
-					},
-				],
+        [
+          {
+            name: "Apprenticeship",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "Science",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "Math",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "History",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+        ],
 
-				[
-					{
-						name: "Apprenticeship",
-						time: 4,
-					},
-					{
-						name: "Science",
-						time: 1.75,
-					},
-					{
-						name: "Math",
-						time: 1,
-					},
-					{
-						name: "History",
-						time: 0.5,
-					},
-				],
+        [
+          {
+            name: "Apprenticeship",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "Science",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "Math",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "History",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+        ],
 
-				[
-					{
-						name: "Apprenticeship",
-						time: 4,
-					},
-					{
-						name: "Science",
-						time: 1.75,
-					},
-					{
-						name: "Math",
-						time: 1,
-					},
-					{
-						name: "History",
-						time: 0.5,
-					},
-				],
+        [
+          {
+            name: "Apprenticeship",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "Science",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "Math",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "History",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+        ],
 
-				[
-					{
-						name: "Apprenticeship",
-						time: 4,
-					},
-					{
-						name: "Science",
-						time: 1.75,
-					},
-					{
-						name: "Math",
-						time: 1,
-					},
-					{
-						name: "History",
-						time: 0.5,
-					},
-				],
+        [
+          {
+            name: "Apprenticeship",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "Science",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "Math",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "History",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+        ],
 
-				[
-					{
-						name: "Apprenticeship",
-						time: 4,
-					},
-					{
-						name: "Science",
-						time: 1.75,
-					},
-					{
-						name: "Math",
-						time: 1,
-					},
-					{
-						name: "History",
-						time: 0.5,
-					},
-				],
-			],
+        [
+          {
+            name: "Apprenticeship",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "Science",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "Math",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "History",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+        ],
+
+        [
+          {
+            name: "Apprenticeship",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "Science",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "Math",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "History",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+        ],
+      ],
 
 			4: [
-				[
-					{
-						name: "Apprenticeship",
-						time: 4,
-					},
-					{
-						name: "Science",
-						time: 1.75,
-					},
-					{
-						name: "Math",
-						time: 1,
-					},
-					{
-						name: "History",
-						time: 0.5,
-					},
-				],
-				
-				[
-					{
-						name: "Apprenticeship",
-						time: 4,
-					},
-					{
-						name: "Science",
-						time: 1.75,
-					},
-					{
-						name: "Math",
-						time: 1,
-					},
-					{
-						name: "History",
-						time: 0.5,
-					},
-				],
+        [
+          {
+            name: "Apprenticeship",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "Science",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "Math",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "History",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+        ],
 
-				[
-					{
-						name: "Apprenticeship",
-						time: 4,
-					},
-					{
-						name: "Science",
-						time: 1.75,
-					},
-					{
-						name: "Math",
-						time: 1,
-					},
-					{
-						name: "History",
-						time: 0.5,
-					},
-				],
+        [
+          {
+            name: "Apprenticeship",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "Science",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "Math",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "History",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+        ],
 
-				[
-					{
-						name: "Apprenticeship",
-						time: 4,
-					},
-					{
-						name: "Science",
-						time: 1.75,
-					},
-					{
-						name: "Math",
-						time: 1,
-					},
-					{
-						name: "History",
-						time: 0.5,
-					},
-				],
+        [
+          {
+            name: "Apprenticeship",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "Science",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "Math",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "History",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+        ],
 
-				[
-					{
-						name: "Apprenticeship",
-						time: 4,
-					},
-					{
-						name: "Science",
-						time: 1.75,
-					},
-					{
-						name: "Math",
-						time: 1,
-					},
-					{
-						name: "History",
-						time: 0.5,
-					},
-				],
+        [
+          {
+            name: "Apprenticeship",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "Science",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "Math",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "History",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+        ],
 
-				[
-					{
-						name: "Apprenticeship",
-						time: 4,
-					},
-					{
-						name: "Science",
-						time: 1.75,
-					},
-					{
-						name: "Math",
-						time: 1,
-					},
-					{
-						name: "History",
-						time: 0.5,
-					},
-				],
+        [
+          {
+            name: "Apprenticeship",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "Science",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "Math",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "History",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+        ],
 
-				[
-					{
-						name: "Apprenticeship",
-						time: 4,
-					},
-					{
-						name: "Science",
-						time: 1.75,
-					},
-					{
-						name: "Math",
-						time: 1,
-					},
-					{
-						name: "History",
-						time: 0.5,
-					},
-				],
-			],
+        [
+          {
+            name: "Apprenticeship",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "Science",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "Math",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "History",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+        ],
 
-			5: [
-				[
-					{
-						name: "Apprenticeship",
-						time: 4,
-					},
-					{
-						name: "Science",
-						time: 1.75,
-					},
-					{
-						name: "Math",
-						time: 1,
-					},
-					{
-						name: "History",
-						time: 0.5,
-					},
-				],
-				
-				[
-					{
-						name: "Apprenticeship",
-						time: 4,
-					},
-					{
-						name: "Science",
-						time: 1.75,
-					},
-					{
-						name: "Math",
-						time: 1,
-					},
-					{
-						name: "History",
-						time: 0.5,
-					},
-				],
-
-				[
-					{
-						name: "Apprenticeship",
-						time: 4,
-					},
-					{
-						name: "Science",
-						time: 1.75,
-					},
-					{
-						name: "Math",
-						time: 1,
-					},
-					{
-						name: "History",
-						time: 0.5,
-					},
-				],
-
-				[
-					{
-						name: "Apprenticeship",
-						time: 4,
-					},
-					{
-						name: "Science",
-						time: 1.75,
-					},
-					{
-						name: "Math",
-						time: 1,
-					},
-					{
-						name: "History",
-						time: 0.5,
-					},
-				],
-
-				[
-					{
-						name: "Apprenticeship",
-						time: 4,
-					},
-					{
-						name: "Science",
-						time: 1.75,
-					},
-					{
-						name: "Math",
-						time: 1,
-					},
-					{
-						name: "History",
-						time: 0.5,
-					},
-				],
-
-				[
-					{
-						name: "Apprenticeship",
-						time: 4,
-					},
-					{
-						name: "Science",
-						time: 1.75,
-					},
-					{
-						name: "Math",
-						time: 1,
-					},
-					{
-						name: "History",
-						time: 0.5,
-					},
-				],
-
-				[
-					{
-						name: "Apprenticeship",
-						time: 4,
-					},
-					{
-						name: "Science",
-						time: 1.75,
-					},
-					{
-						name: "Math",
-						time: 1,
-					},
-					{
-						name: "History",
-						time: 0.5,
-					},
-				],
-			],
+        [
+          {
+            name: "Apprenticeship",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "Science",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "Math",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+          {
+            name: "History",
+            time: Math.round(Math.random() * 50) / 10,
+          },
+        ],
+      ],
     },
   },
 ];
