@@ -10,7 +10,7 @@ export default function Week({ id }) {
 
 	return (
 		<div>
-			<BarGraph mode={selectedWeek ? "active" : "inactive"} />
+			<BarGraph mode={selectedWeek ? "active" : "inactive"} weekId={id} />
 			{selectedWeek && <DaySplits />}
 		</div>
 	);
