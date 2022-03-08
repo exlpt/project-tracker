@@ -11,7 +11,7 @@ export default function projectsReducer(state = {}, action) {
 					title: action.payload.title,
 					themeColor: action.payload.themeColor,
 					bannerImage: action.payload.bannerImage,
-					startDate: `${today.getMonth() + 1}-${today.getDate()}-${today.getFullYear()}`,
+					startDate: `${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate()}`,
 					deadline: action.payload.deadline,
 					hourGoal: action.payload.hourGoal,
 
@@ -35,6 +35,20 @@ export default function projectsReducer(state = {}, action) {
 							],
 						}
 					}
+				}
+			};
+		}
+
+		case "PROJECTS_EDIT_PROJECT": {
+			return {
+				...state,
+				[action.payload.projectId]: {
+					...state[action.payload.projectId],
+					title: action.payload.title,
+					themeColor: action.payload.themeColor,
+					bannerImage: action.payload.bannerImage,
+					deadline: action.payload.deadline,
+					hourGoal: action.payload.hourGoal,
 				}
 			};
 		}
