@@ -1,3 +1,5 @@
+const maxTime = 20;
+
 export const tempProjects = [
   {
     title: "School",
@@ -19,133 +21,133 @@ export const tempProjects = [
         [
           {
             name: "Apprenticeship",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "Science",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "Math",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "History",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
         ],
 
         [
           {
             name: "Apprenticeship",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "Science",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "Math",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "History",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
         ],
 
         [
           {
             name: "Apprenticeship",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "Science",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "Math",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "History",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
         ],
 
         [
           {
             name: "Apprenticeship",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "Science",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "Math",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "History",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
         ],
 
         [
           {
             name: "Apprenticeship",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "Science",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "Math",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "History",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
         ],
 
         [
           {
             name: "Apprenticeship",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "Science",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "Math",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "History",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
         ],
 
         [
           {
             name: "Apprenticeship",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "Science",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "Math",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "History",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
         ],
       ],
@@ -154,133 +156,133 @@ export const tempProjects = [
         [
           {
             name: "Apprenticeship",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "Science",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "Math",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "History",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
         ],
 
         [
           {
             name: "Apprenticeship",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "Science",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "Math",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "History",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
         ],
 
         [
           {
             name: "Apprenticeship",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "Science",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "Math",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "History",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
         ],
 
         [
           {
             name: "Apprenticeship",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "Science",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "Math",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "History",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
         ],
 
         [
           {
             name: "Apprenticeship",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "Science",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "Math",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "History",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
         ],
 
         [
           {
             name: "Apprenticeship",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "Science",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "Math",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "History",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
         ],
 
         [
           {
             name: "Apprenticeship",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "Science",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "Math",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "History",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
         ],
       ],
@@ -289,133 +291,133 @@ export const tempProjects = [
         [
           {
             name: "Apprenticeship",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "Science",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "Math",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "History",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
         ],
 
         [
           {
             name: "Apprenticeship",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "Science",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "Math",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "History",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
         ],
 
         [
           {
             name: "Apprenticeship",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "Science",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "Math",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "History",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
         ],
 
         [
           {
             name: "Apprenticeship",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "Science",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "Math",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "History",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
         ],
 
         [
           {
             name: "Apprenticeship",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "Science",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "Math",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "History",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
         ],
 
         [
           {
             name: "Apprenticeship",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "Science",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "Math",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "History",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
         ],
 
         [
           {
             name: "Apprenticeship",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "Science",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "Math",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "History",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
         ],
       ],
@@ -424,133 +426,133 @@ export const tempProjects = [
         [
           {
             name: "Apprenticeship",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "Science",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "Math",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "History",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
         ],
 
         [
           {
             name: "Apprenticeship",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "Science",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "Math",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "History",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
         ],
 
         [
           {
             name: "Apprenticeship",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "Science",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "Math",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "History",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
         ],
 
         [
           {
             name: "Apprenticeship",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "Science",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "Math",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "History",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
         ],
 
         [
           {
             name: "Apprenticeship",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "Science",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "Math",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "History",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
         ],
 
         [
           {
             name: "Apprenticeship",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "Science",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "Math",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "History",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
         ],
 
         [
           {
             name: "Apprenticeship",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "Science",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "Math",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "History",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
         ],
       ],
@@ -559,133 +561,133 @@ export const tempProjects = [
         [
           {
             name: "Apprenticeship",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "Science",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "Math",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "History",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
         ],
 
         [
           {
             name: "Apprenticeship",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "Science",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "Math",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "History",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
         ],
 
         [
           {
             name: "Apprenticeship",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "Science",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "Math",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "History",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
         ],
 
         [
           {
             name: "Apprenticeship",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "Science",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "Math",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "History",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
         ],
 
         [
           {
             name: "Apprenticeship",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "Science",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "Math",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "History",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
         ],
 
         [
           {
             name: "Apprenticeship",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "Science",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "Math",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "History",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
         ],
 
         [
           {
             name: "Apprenticeship",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "Science",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "Math",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
           {
             name: "History",
-            time: Math.round(Math.random() * 50) / 10,
+            time: Math.round(Math.random() * maxTime) / 10,
           },
         ],
       ],
