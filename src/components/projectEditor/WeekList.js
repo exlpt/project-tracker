@@ -9,8 +9,8 @@ export default function WeekList() {
 	const weekIds = Object.keys(useSelector(state => state.projects[projectId].weeks));
 
 	return (
-		<div className={styles.weekList_container}>
-			<div className={styles.weekList_daysContainer}>
+		<div className={styles.container}>
+			<div className={styles.daysContainer}>
 				<h1>S</h1>
 				<h1>M</h1>
 				<h1>T</h1>

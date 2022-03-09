@@ -9,7 +9,7 @@ export default function Week({ id }) {
 	const selectedWeek = id === useSelector(state => state.projectEditor.selectedWeekId);
 
 	return (
-		<div>
+		<div className={styles.container}>
 			<BarGraph mode={selectedWeek ? "active" : "inactive"} weekId={id} />
 			{selectedWeek && <DaySplits />}
 		</div>

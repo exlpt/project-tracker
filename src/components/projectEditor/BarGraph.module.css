@@ -1,12 +1,16 @@
-.barGraph_container {
-	margin: 10px;
-	
+.container {
 	width: 100%;
-	height: 20px;
+
+	display: flex;
+	justify-content: space-around;
+	align-items: flex-end;
 	
 	border: 1px solid black;
 }
 
 .active {
-	height: 60px;
+}
+
+.timeBar {
+	width: 50px;
 }
