@@ -18,7 +18,6 @@ export default function BarGraph({ mode, weekId }) {
   // Vars
   const daysLeft = deadline ? deadline - Math.floor(new Date().getTime() / 86400000) - 1 : null;
   const dailyRate = hourGoal && deadline ? (hourGoal - projectTime) / daysLeft : null;
-  console.log(dailyRate);
 
   const graphHeight = mode === "active" ? 120 : 60;
 
@@ -27,6 +26,8 @@ export default function BarGraph({ mode, weekId }) {
     return dayTime > acc ? dayTime : acc;
   }, addSplitsInDay(week[0]));
   if (dailyRate && dailyRate > mostTime) mostTime = dailyRate;
+
+  const ovfScaleFactor = graphHeight / mostTime;
 
   const rateBarHeight = dailyRate ? (dailyRate / mostTime) * 100 : null;
 
@@ -69,7 +70,12 @@ export default function BarGraph({ mode, weekId }) {
               className={styles.timeBar}
               style={{
                 height: `${barPercent * 100}%`,
-                background: `hsl(${barHue}, 72%, 50%)`,
+                background:
+                  rateBarHeight < barPercent * 100
+                    ? `linear-gradient(180deg,
+											rgba(36, 219, 54, 1) ${dailyRate * ovfScaleFactor}px,
+											rgba(57, 184, 255, 1) ${dailyRate * ovfScaleFactor}px)`
+                    : `hsl(${barHue}, 72%, 50%)`,
               }}
             ></div>
           </div>
