@@ -78,6 +78,10 @@ export default function BarGraph({ mode, weekId }) {
                     : `hsl(${barHue}, 72%, 50%)`,
               }}
             ></div>
+
+            {mode === "active" && (
+              <p className={styles.timeBarNumber}>{Math.floor(addSplitsInDay(day) * 100) / 100} hrs</p>
+            )}
           </div>
         );
       })}

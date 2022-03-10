@@ -29,3 +29,14 @@
 	right: 0;
 	left: 0;
 }
+
+.timeBarNumber {
+	position: absolute;
+	right: 0;
+	left: 0;
+
+	font-size: 0.9rem;
+	text-align: center;
+	
+	transform: scaleY(-1);
+}
