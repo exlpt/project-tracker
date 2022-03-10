@@ -17,13 +17,13 @@ export function editProject(projectId, title, themeColor, bannerImage, deadline,
   return {
     type: "PROJECTS_EDIT_PROJECT",
     payload: {
-			projectId,
-			title,
-			themeColor,
-			bannerImage,
-			deadline,
-			hourGoal
-		},
+      projectId,
+      title,
+      themeColor,
+      bannerImage,
+      deadline,
+      hourGoal,
+    },
   };
 }
 
@@ -48,12 +48,10 @@ export function addSplit(projectId, splitName, splitColor) {
 }
 
 export function addWeek(projectId) {
-  const defaultWeekSplits = store
-    .getState()
-    .projects[projectId].projectSplits.map((split) => ({
-      name: split.name,
-      time: 0,
-    }));
+  const defaultWeekSplits = store.getState().projects[projectId].projectSplits.map((split) => ({
+    name: split.name,
+    time: 0,
+  }));
 
   return {
     type: "PROJECTS_ADD_WEEK",
@@ -72,6 +70,16 @@ export function setSplitTime(projectId, weekId, dayIndex, splitName, time) {
       weekId,
       dayIndex,
       splitName,
+      time,
+    },
+  };
+}
+
+export function setProjectTotalTime(projectId, time) {
+  return {
+    type: "PROJECT_SET_TOTAL_TIME",
+    payload: {
+      projectId,
       time,
     },
   };

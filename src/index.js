@@ -22,14 +22,20 @@ tempProjects.forEach((project) => {
     )
   );
 
+	// Set default project
+  if (!Object.keys(store.getState().projects)[1]) {
+    const defaultProjectId = Object.keys(store.getState().projects)[0];
+    const defaultWeekId = Object.keys(store.getState().projects[defaultProjectId].weeks)[0];
+    store.dispatch(projectEditorActions.setProjectId(defaultProjectId));
+    store.dispatch(projectEditorActions.setWeekId(defaultWeekId));
+  }
+
   // Add splits to project
   const projectIds = Object.keys(store.getState().projects);
   const currentProjectId = projectIds[projectIds.length - 1];
 
   project.projectSplits.forEach((split) => {
-    store.dispatch(
-      projectsActions.addSplit(currentProjectId, split.name, split.color)
-    );
+    store.dispatch(projectsActions.addSplit(currentProjectId, split.name, split.color));
   });
 
   // Add weeks
@@ -39,9 +45,7 @@ tempProjects.forEach((project) => {
 
   // Set split times
   const projectWeeks = store.getState().projects[currentProjectId].weeks;
-  const weekIds = Object.keys(
-    store.getState().projects[currentProjectId].weeks
-  );
+  const weekIds = Object.keys(store.getState().projects[currentProjectId].weeks);
   const splitNames = project.projectSplits.map((split) => split.name);
   for (let weekIndex = 0; weekIndex < weekIds.length; weekIndex++) {
     const weekId = weekIds[weekIndex];
@@ -63,13 +67,6 @@ tempProjects.forEach((project) => {
     }
   }
 });
-
-const defaultProjectId = Object.keys(store.getState().projects)[0];
-const defaultWeekId = Object.keys(
-  store.getState().projects[defaultProjectId].weeks
-)[0];
-store.dispatch(projectEditorActions.setProjectId(defaultProjectId));
-store.dispatch(projectEditorActions.setWeekId(defaultWeekId));
 
 ReactDOM.render(
   <Provider store={store}>

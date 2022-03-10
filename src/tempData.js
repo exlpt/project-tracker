@@ -1,4 +1,4 @@
-const maxTime = 20;
+const maxTime = 15;
 
 export const tempProjects = [
   {

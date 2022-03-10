@@ -11,6 +11,21 @@
 .active {
 }
 
-.timeBar {
+.barContainer {
 	width: 50px;
+	transform: scaleY(-1);
+
+	position: relative;
+}
+
+.timeBar {
+	position: absolute;
+	right: 0;
+	left: 0;
+}
+
+.rateBar {
+	position: absolute;
+	right: 0;
+	left: 0;
 }
