@@ -1,0 +1,52 @@
+.container {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+
+	margin-top: 120px;
+
+	position: relative;
+}
+
+.splitContainer {
+	border: 1px solid black;
+
+	display: flex;
+	flex-direction: column;
+
+	justify-content: center;
+	align-items: center;
+
+	width: 130px;
+	height: 60px;
+}
+
+.splitName {
+	width: 90%;
+	word-wrap: break-word;
+	
+	text-align: center;
+
+	margin: 0;
+}
+
+.splitTime {
+	width: 90%;
+	word-wrap: break-word;
+	
+	text-align: center;
+
+	margin: 0;
+
+	border: none;
+
+	cursor: pointer;
+}
+
+.canvas {
+	height: 120px;
+
+	position: absolute;
+	top: -120px;
+	left: 0;
+}

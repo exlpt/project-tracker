@@ -4,7 +4,7 @@ import styles from "./BarGraph.module.css";
 
 import { addSplitsInDay } from "../../util.js";
 
-export default function BarGraph({ mode, weekId }) {
+export default function BarGraph({ mode, weekId, setSelectedDay }) {
   // Store
   const projectId = useSelector((state) => state.projectEditor.currentProjectId);
   const week = useSelector((state) => state.projects[projectId].weeks[weekId]);
@@ -55,7 +55,12 @@ export default function BarGraph({ mode, weekId }) {
         if (barHue > fullTimeHue) barHue = fullTimeHue;
 
         return (
-          <div className={styles.barContainer} style={{ height: graphHeight }} key={index}>
+          <div
+            onClick={() => setSelectedDay(index)}
+            className={styles.barContainer}
+            style={{ height: graphHeight }}
+            key={index}
+          >
             {rateBarHeight && (
               <div
                 className={styles.rateBar}

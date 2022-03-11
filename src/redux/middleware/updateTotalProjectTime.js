@@ -1,6 +1,8 @@
 import { setProjectTotalTime } from "../actionCreators/projectsActionCreators.js";
 
 const updateTotalProjectTime = (store) => (next) => (action) => {
+	next(action);
+
   if (action.type === "PROJECTS_SET_SPLIT_TIME") {
     const projectId = store.getState().projectEditor.currentProjectId;
 
@@ -19,8 +21,6 @@ const updateTotalProjectTime = (store) => (next) => (action) => {
 			store.dispatch(setProjectTotalTime(projectId, Math.floor(totalTime * 100) / 100));
     }
   }
-
-  next(action);
 };
 
 export default updateTotalProjectTime;
