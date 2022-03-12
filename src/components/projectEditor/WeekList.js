@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import { useSelector } from "react-redux";
 
 import styles from "./WeekList.module.css";
@@ -8,8 +9,10 @@ export default function WeekList() {
 	const projectId = useSelector(state => state.projectEditor.currentProjectId);
 	const weekIds = Object.keys(useSelector(state => state.projects[projectId].weeks));
 
+	const weeksContainer = useRef(null);
+
 	return (
-		<div className={styles.container}>
+		<div ref={weeksContainer} className={styles.container}>
 			<div className={styles.daysContainer}>
 				<h1>S</h1>
 				<h1>M</h1>
@@ -20,9 +23,7 @@ export default function WeekList() {
 				<h1>S</h1>
 			</div>
 
-			<div>
-				{weekIds.map((weekId, index) => <Week id={weekId} key={index} />)}
-			</div>
+			{weekIds.map((weekId, index) => <Week id={weekId} container={weeksContainer} key={index} />)}
 		</div>
 	)
 }

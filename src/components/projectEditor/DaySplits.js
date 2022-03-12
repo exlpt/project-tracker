@@ -46,7 +46,7 @@ export default function DaySplits({ weekId, selectedDay }) {
 
   useEffect(() => {
     window.addEventListener("resize", onResize);
-    return () => window.removeEventListener("resize");
+    return () => window.removeEventListener("resize", onResize);
   }, []);
 
   const [canvasWidth, setCanvasWidth] = useState(window.innerWidth * 0.55 - 57);
@@ -80,9 +80,10 @@ export default function DaySplits({ weekId, selectedDay }) {
               name={split.name}
               max={24}
               min={0}
+							step={0.5}
               onChange={({ target }) => {
                 let time = Math.floor(parseFloat(target.value) * 100) / 100;
-                if (time >= 24) {
+                if (isNaN(time) || time >= 24) {
                   time = 0;
                   console.log("Max exeeded");
                 }
