@@ -21,7 +21,6 @@ export default function Week({ id, container }) {
       weekContainer.current.getBoundingClientRect().top -
       (selectedWeek ? 100 : 340) -
       container.current.getBoundingClientRect().top;
-    console.log(weekPos);
   }, []);
 
   function selectThisWeek() {
@@ -34,7 +33,7 @@ export default function Week({ id, container }) {
   return (
     <div onClick={selectThisWeek} ref={weekContainer} className={styles.container}>
       <BarGraph mode={selectedWeek ? "active" : "inactive"} weekId={id} setSelectedDay={setSelectedDay} />
-      {selectedWeek && <DaySplits weekId={id} selectedDay={selectedDay} />}
+      {selectedWeek && <DaySplits weekId={id} selectedDay={selectedDay} weekListRef={container} />}
     </div>
   );
 }
