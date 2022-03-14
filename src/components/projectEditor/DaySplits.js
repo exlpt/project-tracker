@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 
-import { setSplitTime } from "../../redux/actionCreators/projectsActionCreators.js";
+import { setDaySplitTime } from "../../redux/actionCreators/projectsActionCreators.js";
 
 import styles from "./DaySplits.module.css";
 import weekListStyles from "./WeekList.module.css";
@@ -21,8 +21,6 @@ export default function DaySplits({ weekId, selectedDay, weekListRef }) {
   // Hooks
   const canvasRef = useRef(null);
 	const [canvasWidth, setCanvasWidth] = useState(null);
-
-	console.log('help')
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -98,7 +96,7 @@ export default function DaySplits({ weekId, selectedDay, weekListRef }) {
                   time = 0;
                   console.log("Max exeeded");
                 }
-                dispatch(setSplitTime(projectId, weekId, selectedDay, target.name, time));
+                dispatch(setDaySplitTime(projectId, weekId, selectedDay, target.name, time));
               }}
               className={styles.splitTime}
             />

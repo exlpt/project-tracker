@@ -55,7 +55,7 @@ tempProjects.forEach((project) => {
         const splitName = splitNames[splitIndex];
 
         store.dispatch(
-          projectsActions.setSplitTime(
+          projectsActions.setDaySplitTime(
             currentProjectId,
             weekId,
             dayIndex,

@@ -3,7 +3,7 @@ import { useState } from "react";
 
 export default function projectsReducer(state = {}, action) {
   switch (action.type) {
-    case "PROJECTS_ADD_PROJECT": {
+    case "ADD_PROJECT": {
       const today = new Date();
 
       return {
@@ -26,7 +26,7 @@ export default function projectsReducer(state = {}, action) {
       };
     }
 
-    case "PROJECTS_EDIT_PROJECT": {
+    case "EDIT_PROJECT": {
       return {
         ...state,
         [action.payload.projectId]: {
@@ -40,7 +40,7 @@ export default function projectsReducer(state = {}, action) {
       };
     }
 
-    case "PROJECTS_DELETE_PROJECT": {
+    case "DELETE_PROJECT": {
       const newState = {};
 
       const projectIds = Object.keys(state);
@@ -53,7 +53,33 @@ export default function projectsReducer(state = {}, action) {
       return newState;
     }
 
-    case "PROJECTS_ADD_SPLIT": {
+		case "ADD_WEEK": {
+      const newProject = { ...state[action.payload.projectId] };
+
+      newProject.weeks[nanoid()] = [
+        JSON.parse(JSON.stringify(action.payload.defaultWeekSplits)),
+        JSON.parse(JSON.stringify(action.payload.defaultWeekSplits)),
+        JSON.parse(JSON.stringify(action.payload.defaultWeekSplits)),
+        JSON.parse(JSON.stringify(action.payload.defaultWeekSplits)),
+        JSON.parse(JSON.stringify(action.payload.defaultWeekSplits)),
+        JSON.parse(JSON.stringify(action.payload.defaultWeekSplits)),
+        JSON.parse(JSON.stringify(action.payload.defaultWeekSplits)),
+      ];
+
+      return { ...state, [action.payload.projectId]: newProject };
+    }
+
+		case "SET_TOTAL_TIME": {
+      return {
+        ...state,
+        [action.payload.projectId]: {
+          ...state[action.payload.projectId],
+          totalTime: action.payload.time,
+        },
+      };
+    }
+
+    case "ADD_SPLIT": {
       const newState = JSON.parse(JSON.stringify(state));
 
       newState[action.payload.projectId].projectSplits.push({
@@ -70,23 +96,7 @@ export default function projectsReducer(state = {}, action) {
       return newState;
     }
 
-    case "PROJECTS_ADD_WEEK": {
-      const newProject = { ...state[action.payload.projectId] };
-
-      newProject.weeks[nanoid()] = [
-        JSON.parse(JSON.stringify(action.payload.defaultWeekSplits)),
-        JSON.parse(JSON.stringify(action.payload.defaultWeekSplits)),
-        JSON.parse(JSON.stringify(action.payload.defaultWeekSplits)),
-        JSON.parse(JSON.stringify(action.payload.defaultWeekSplits)),
-        JSON.parse(JSON.stringify(action.payload.defaultWeekSplits)),
-        JSON.parse(JSON.stringify(action.payload.defaultWeekSplits)),
-        JSON.parse(JSON.stringify(action.payload.defaultWeekSplits)),
-      ];
-
-      return { ...state, [action.payload.projectId]: newProject };
-    }
-
-    case "PROJECTS_SET_SPLIT_TIME": {
+    case "SET_DAY_SPLIT_TIME": {
       const newState = { ...state };
 
       newState[action.payload.projectId].weeks[action.payload.weekId][action.payload.dayIndex].forEach(
@@ -97,16 +107,6 @@ export default function projectsReducer(state = {}, action) {
       );
 
       return newState;
-    }
-
-    case "PROJECT_SET_TOTAL_TIME": {
-      return {
-        ...state,
-        [action.payload.projectId]: {
-          ...state[action.payload.projectId],
-          totalTime: action.payload.time,
-        },
-      };
     }
 
     default: {

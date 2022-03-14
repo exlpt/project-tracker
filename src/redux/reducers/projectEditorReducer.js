@@ -3,14 +3,14 @@ export default function projectEditorReducer(
   action
 ) {
   switch (action.type) {
-		case "PROJECT_EDITOR_SET_PROJECT_ID": {
+		case "SET_PROJECT_ID": {
 			return {
 				...state,
 				currentProjectId: action.payload.projectId
 			}
 		}
 
-		case "PROJECT_EDITOR_SET_WEEK_ID": {
+		case "SET_WEEK_ID": {
 			return {
 				...state,
 				selectedWeekId: action.payload.weekId

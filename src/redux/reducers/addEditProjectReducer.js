@@ -3,14 +3,14 @@ export default function AddEditProjectReducer(
   action
 ) {
   switch (action.type) {
-    case "ADD_EDIT_PROJECT_SET_MODE": {
+    case "SET_MODE": {
       return {
         ...state,
         mode: action.payload.mode,
       };
     }
 
-    case "ADD_EDIT_PROJECT_SET_PROJECT": {
+    case "SET_PROJECT": {
       return {
         ...state,
         projectId: action.payload.projectId,

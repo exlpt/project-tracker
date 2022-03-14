@@ -2,7 +2,7 @@ import store from "../store.js";
 
 export function addProject(title, themeColor, bannerImage, deadline, hourGoal) {
   return {
-    type: "PROJECTS_ADD_PROJECT",
+    type: "ADD_PROJECT",
     payload: {
       title,
       themeColor,
@@ -15,7 +15,7 @@ export function addProject(title, themeColor, bannerImage, deadline, hourGoal) {
 
 export function editProject(projectId, title, themeColor, bannerImage, deadline, hourGoal) {
   return {
-    type: "PROJECTS_EDIT_PROJECT",
+    type: "EDIT_PROJECT",
     payload: {
       projectId,
       title,
@@ -29,57 +29,57 @@ export function editProject(projectId, title, themeColor, bannerImage, deadline,
 
 export function deleteProject(projectId) {
   return {
-    type: "PROJECTS_DELETE_PROJECT",
+    type: "DELETE_PROJECT",
     payload: {
       projectId,
-    },
-  };
-}
-
-export function addSplit(projectId, splitName, splitColor) {
-  return {
-    type: "PROJECTS_ADD_SPLIT",
-    payload: {
-      projectId,
-      splitName,
-      splitColor,
     },
   };
 }
 
 export function addWeek(projectId) {
-  const defaultWeekSplits = store.getState().projects[projectId].projectSplits.map((split) => ({
-    name: split.name,
+	const defaultWeekSplits = store.getState().projects[projectId].projectSplits.map((split) => ({
+		name: split.name,
     time: 0,
   }));
-
+	
   return {
-    type: "PROJECTS_ADD_WEEK",
+		type: "ADD_WEEK",
     payload: {
-      projectId,
+			projectId,
       defaultWeekSplits,
     },
   };
 }
 
-export function setSplitTime(projectId, weekId, dayIndex, splitName, time) {
+export function setProjectTotalTime(projectId, time) {
+	return {
+		type: "SET_TOTAL_TIME",
+		payload: {
+			projectId,
+			time,
+		},
+	};
+}
+
+export function addSplit(projectId, splitName, splitColor) {
+	return {
+		type: "ADD_SPLIT",
+		payload: {
+			projectId,
+			splitName,
+			splitColor,
+		},
+	};
+}
+
+export function setDaySplitTime(projectId, weekId, dayIndex, splitName, time) {
   return {
-    type: "PROJECTS_SET_SPLIT_TIME",
+    type: "SET_DAY_SPLIT_TIME",
     payload: {
       projectId,
       weekId,
       dayIndex,
       splitName,
-      time,
-    },
-  };
-}
-
-export function setProjectTotalTime(projectId, time) {
-  return {
-    type: "PROJECT_SET_TOTAL_TIME",
-    payload: {
-      projectId,
       time,
     },
   };
