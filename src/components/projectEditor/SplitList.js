@@ -1,15 +1,40 @@
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+
+import { deleteSplit } from "../../redux/actionCreators/projectsActionCreators.js";
+
+import styles from "./SplitList.module.css";
+
+import deleteSymbol from "../../assets/images/delete.svg";
 
 export default function SplitList() {
-  const projectId = useSelector(
-    (state) => state.projectEditor.currentProjectId
-  );
-  const projectSplits = useSelector(
-    (state) => state.projects[projectId].projectSplits
-  );
+  const dispatch = useDispatch();
+
+  const projectId = useSelector((state) => state.projectEditor.currentProjectId);
+  const projectSplits = useSelector((state) => state.projects[projectId].projectSplits);
+  const project = useSelector((state) => state.projects[projectId]);
+
+  function deleteSplitHandler({ target: { name } }) {
+    dispatch(deleteSplit(projectId, name));
+  }
+
+  function addAllDaySplits(splitName) {
+    let total = 0;
+
+    for (let weekId in project.weeks) {
+      project.weeks[weekId].forEach((day) => {
+        day.forEach((split) => {
+          if (split.name === splitName) {
+            total += split.time;
+          }
+        });
+      });
+    }
+
+    return Math.round(total * 100) / 100;
+  }
 
   return (
-    <ul
+    <div
       style={{
         height: "200px",
         width: "300px",
@@ -17,20 +42,32 @@ export default function SplitList() {
         overflowY: "scroll",
       }}
     >
-      {projectSplits.map((split, index) => {
-        const splitColorStyle = { color: split.color };
+      <table>
+        <tbody>
+          {projectSplits.map((split, index) => {
+            return (
+              <tr key={index}>
+                <td className={styles.splitName} style={{ color: split.color }}>
+                  {split.name}
+                </td>
 
-        return (
-          <li style={{ listStyleType: "none" }} key={index}>
-            <p style={{ ...splitColorStyle, display: "inline" }}>
-              {split.name}
-            </p>
-            <p style={{ display: "inline" }}>
-              • <span style={splitColorStyle}>[split time]</span>
-            </p>
-          </li>
-        );
-      })}
-    </ul>
+                <td>
+                  •{" "}
+                  <span className={styles.splitTime} style={{ color: split.color }}>
+                    {addAllDaySplits(split.name)}
+                  </span>
+                </td>
+
+                <td>
+                  <button name={split.name} onClick={deleteSplitHandler} className={styles.deleteButton}>
+                    <img name={split.name} src={deleteSymbol} className={styles.deleteIcon} />
+                  </button>
+                </td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+    </div>
   );
 }

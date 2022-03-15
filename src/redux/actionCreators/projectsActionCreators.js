@@ -37,39 +37,49 @@ export function deleteProject(projectId) {
 }
 
 export function addWeek(projectId) {
-	const defaultWeekSplits = store.getState().projects[projectId].projectSplits.map((split) => ({
-		name: split.name,
+  const defaultWeekSplits = store.getState().projects[projectId].projectSplits.map((split) => ({
+    name: split.name,
     time: 0,
   }));
-	
+
   return {
-		type: "ADD_WEEK",
+    type: "ADD_WEEK",
     payload: {
-			projectId,
+      projectId,
       defaultWeekSplits,
     },
   };
 }
 
 export function setProjectTotalTime(projectId, time) {
-	return {
-		type: "SET_TOTAL_TIME",
-		payload: {
-			projectId,
-			time,
-		},
-	};
+  return {
+    type: "SET_TOTAL_TIME",
+    payload: {
+      projectId,
+      time,
+    },
+  };
 }
 
 export function addSplit(projectId, splitName, splitColor) {
-	return {
-		type: "ADD_SPLIT",
-		payload: {
-			projectId,
-			splitName,
-			splitColor,
-		},
-	};
+  return {
+    type: "ADD_SPLIT",
+    payload: {
+      projectId,
+      splitName,
+      splitColor,
+    },
+  };
+}
+
+export function deleteSplit(projectId, splitName) {
+  return {
+    type: "DELETE_SPLIT",
+    payload: {
+      projectId,
+      splitName,
+    },
+  };
 }
 
 export function setDaySplitTime(projectId, weekId, dayIndex, splitName, time) {

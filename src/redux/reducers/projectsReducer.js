@@ -53,7 +53,7 @@ export default function projectsReducer(state = {}, action) {
       return newState;
     }
 
-		case "ADD_WEEK": {
+    case "ADD_WEEK": {
       const newProject = { ...state[action.payload.projectId] };
 
       newProject.weeks[nanoid()] = [
@@ -69,7 +69,7 @@ export default function projectsReducer(state = {}, action) {
       return { ...state, [action.payload.projectId]: newProject };
     }
 
-		case "SET_TOTAL_TIME": {
+    case "SET_TOTAL_TIME": {
       return {
         ...state,
         [action.payload.projectId]: {
@@ -91,6 +91,24 @@ export default function projectsReducer(state = {}, action) {
         newState[action.payload.projectId].weeks[weekId] = newState[action.payload.projectId].weeks[
           weekId
         ].map((daySplits) => [...daySplits, { name: action.payload.splitName, time: 0 }]);
+      }
+
+      return newState;
+    }
+
+    case "DELETE_SPLIT": {
+      const newState = JSON.parse(JSON.stringify(state));
+
+      newState[action.payload.projectId].projectSplits = newState[
+        action.payload.projectId
+      ].projectSplits.filter((split) => split.name !== action.payload.splitName);
+
+      for (let weekId in newState[action.payload.projectId].weeks) {
+        newState[action.payload.projectId].weeks[weekId].forEach((day, index) => {
+          newState[action.payload.projectId].weeks[weekId][index] = day.filter(
+            (split) => split.name !== action.payload.splitName
+          );
+        });
       }
 
       return newState;

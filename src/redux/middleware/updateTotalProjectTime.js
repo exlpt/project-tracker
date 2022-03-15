@@ -3,7 +3,7 @@ import { setProjectTotalTime } from "../actionCreators/projectsActionCreators.js
 const updateTotalProjectTime = (store) => (next) => (action) => {
 	next(action);
 
-  if (action.type === "SET_DAY_SPLIT_TIME") {
+  if (action.type === "SET_DAY_SPLIT_TIME" || action.type === "DELETE_SPLIT") {
     const projectId = store.getState().projectEditor.currentProjectId;
 
     if (projectId) {

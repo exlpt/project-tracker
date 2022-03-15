@@ -8,9 +8,7 @@ import SplitList from "./SplitList.js";
 export default function Splits() {
   const dispatch = useDispatch();
 
-  const projectId = useSelector(
-    (state) => state.projectEditor.currentProjectId
-  );
+  const projectId = useSelector((state) => state.projectEditor.currentProjectId);
 
   const projectSplitNames = useSelector((state) =>
     state.projects[projectId].projectSplits.map((split) => split.name)
@@ -33,19 +31,17 @@ export default function Splits() {
     event.preventDefault();
 
     !projectSplitNames.some((splitName) => formData.name === splitName) &&
-      dispatch(
-        projectsActions.addSplit(projectId, formData.name, formData.color)
-      );
+      dispatch(projectsActions.addSplit(projectId, formData.name, formData.color));
   }
 
   return (
     <div>
       <h1>Splits</h1>
 
-			<SplitList />
+      <SplitList />
 
       <form onSubmit={addSplitToProject}>
-        <input type="text" name="name" onChange={updateFormState} />
+        <input type="text" maxLength={21} name="name" onChange={updateFormState} />
         <input type="color" name="color" onChange={updateFormState} />
         <button disabled={!(formData.color && formData.name)}>Submit</button>
       </form>
