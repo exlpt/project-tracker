@@ -35,7 +35,7 @@ export default function ProjectEditorPage() {
       dispatch(addWeek(projectId));
     }
     dispatch(editDates(projectId, null, `${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate()}`));
-  });
+  }, []);
 
   // Set default week
   dispatch(setWeekId(Object.keys(project.weeks)[0]));
