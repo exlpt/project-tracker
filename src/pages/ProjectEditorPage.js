@@ -34,11 +34,14 @@ export default function ProjectEditorPage() {
     for (let i = 0; i < ~~(timeSinceLastOpened / 7) + hasWeekFinished; i++) {
       dispatch(addWeek(projectId));
     }
+
     dispatch(editDates(projectId, null, `${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate()}`));
   }, []);
 
-  // Set default week
-  dispatch(setWeekId(Object.keys(project.weeks)[0]));
+  // Set default week after all weeks have been added
+  useEffect(() => {
+    dispatch(setWeekId(Object.keys(project.weeks)[0]));
+  }, [dateProjectLastOpened]);
 
   const splitStartDate = project.startDate.split("-");
   const splitDeadline = deadline && project.deadline.split("-");

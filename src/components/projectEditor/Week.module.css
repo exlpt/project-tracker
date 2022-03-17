@@ -1,3 +1,13 @@
 .container {
 	margin: 20px;
 }
+
+.startDate {
+	float: left;
+	margin: 0 0 10px 0;
+}
+
+.endDate {
+	float: right;
+	margin: 0 0 10px 0;
+}
