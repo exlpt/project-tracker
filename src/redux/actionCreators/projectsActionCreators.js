@@ -27,6 +27,17 @@ export function editProject(projectId, title, themeColor, bannerImage, deadline,
   };
 }
 
+export function editDates(projectId, startDate, dateLastOpened) {
+  return {
+    type: "EDIT_DATES",
+    payload: {
+			projectId,
+      startDate,
+      dateLastOpened,
+    },
+  };
+}
+
 export function deleteProject(projectId) {
   return {
     type: "DELETE_PROJECT",

@@ -8,6 +8,7 @@ import * as projectEditorActions from "./redux/actionCreators/projectEditorActio
 
 import App from "./App.js";
 
+// Grab project data from API (grabbing from temp file)
 import { tempProjects } from "./tempData.js";
 
 tempProjects.forEach((project) => {
@@ -22,18 +23,19 @@ tempProjects.forEach((project) => {
     )
   );
 
-	// Set default project
+  // Set default project
   if (!Object.keys(store.getState().projects)[1]) {
     const defaultProjectId = Object.keys(store.getState().projects)[0];
-    const defaultWeekId = Object.keys(store.getState().projects[defaultProjectId].weeks)[0];
     store.dispatch(projectEditorActions.setProjectId(defaultProjectId));
-    store.dispatch(projectEditorActions.setWeekId(defaultWeekId));
   }
 
-  // Add splits to project
   const projectIds = Object.keys(store.getState().projects);
   const currentProjectId = projectIds[projectIds.length - 1];
 
+  // Set project dates
+  store.dispatch(projectsActions.editDates(currentProjectId, project.startDate, project.dateLastOpened));
+
+  // Add projectSplits to project
   project.projectSplits.forEach((split) => {
     store.dispatch(projectsActions.addSplit(currentProjectId, split.name, split.color));
   });
@@ -44,7 +46,6 @@ tempProjects.forEach((project) => {
   }
 
   // Set split times
-  const projectWeeks = store.getState().projects[currentProjectId].weeks;
   const weekIds = Object.keys(store.getState().projects[currentProjectId].weeks);
   const splitNames = project.projectSplits.map((split) => split.name);
   for (let weekIndex = 0; weekIndex < weekIds.length; weekIndex++) {

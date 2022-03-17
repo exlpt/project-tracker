@@ -6,7 +6,8 @@ export const tempProjects = [
     themeColor: "#fc803d",
     bannerImage: "",
     deadline: "2022-5-8",
-    startDate: "2022-1-18",
+    startDate: "2022-2-7",
+		dateLastOpened: "2022-3-10",
     hourGoal: 308,
 
     projectSplits: [
