@@ -9,18 +9,20 @@ import weekListStyles from "./WeekList.module.css";
 import { addSplitsInDay } from "../../util.js";
 
 export default function DaySplits({ weekId, selectedDay, weekListRef }) {
-	// Vars
+  // Vars
   let weekListWidthPercent = null;
-	
+
   // Store
   const dispatch = useDispatch();
-	
+
   const projectId = useSelector((state) => state.projectEditor.currentProjectId);
   const day = useSelector((state) => state.projects[projectId].weeks[weekId][selectedDay]);
-	
+
   // Hooks
+  const [renderTooltips, setRenderTooltips] = useState(day.map(() => false));
+
   const canvasRef = useRef(null);
-	const [canvasWidth, setCanvasWidth] = useState(null);
+  const [canvasWidth, setCanvasWidth] = useState(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -30,38 +32,37 @@ export default function DaySplits({ weekId, selectedDay, weekListRef }) {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.beginPath();
     ctx.lineWidth = 2;
-		
+
     const startStep = canvas.width / 7;
     const startOffset = canvas.width / 14;
-		
+
     const endStep = canvas.width / day.length;
     const endOffset = canvas.width / (day.length * 2.0745);
-		
+
     const curveSteepness = 45;
-		
+
     day.forEach((split, index) => {
-			const startX = selectedDay * startStep + startOffset;
+      const startX = selectedDay * startStep + startOffset;
       const endX = index * endStep + endOffset;
-			
+
       ctx.moveTo(startX, 5);
       ctx.bezierCurveTo(startX, 5 + curveSteepness, endX, 115 - curveSteepness, endX, 115);
       ctx.stroke();
     });
 
-		// Get WeekList width
-		weekListWidthPercent =
-			Math.ceil((parseFloat(getComputedStyle(weekListRef.current).width) / document.body.clientWidth) * 100) /
-			100;
-		
-		setCanvasWidth(window.innerWidth * weekListWidthPercent - 57);
+    // Get WeekList width
+    weekListWidthPercent =
+      Math.ceil((parseFloat(getComputedStyle(weekListRef.current).width) / document.body.clientWidth) * 100) /
+      100;
+
+    setCanvasWidth(window.innerWidth * weekListWidthPercent - 57);
   }, [selectedDay, day, canvasWidth]);
-	
+
   useEffect(() => {
-		window.addEventListener("resize", onResize);
+    window.addEventListener("resize", onResize);
     return () => window.removeEventListener("resize", onResize);
   }, []);
-	
-	
+
   // Funcs
   function onResize() {
     setCanvasWidth(window.innerWidth * weekListWidthPercent - 57);
@@ -94,12 +95,18 @@ export default function DaySplits({ weekId, selectedDay, weekListRef }) {
                 let time = Math.floor(parseFloat(target.value) * 100) / 100;
                 if (isNaN(time) || time >= 24) {
                   time = 0;
-                  console.log("Max exeeded");
+                  setRenderTooltips((prev) => prev.map((val, i) => (i === index ? true : val)));
+                  setTimeout(
+                    () => setRenderTooltips((prev) => prev.map((val, i) => (i === index ? false : val))),
+                    2000
+                  );
                 }
                 dispatch(setDaySplitTime(projectId, weekId, selectedDay, target.name, time));
               }}
               className={styles.splitTime}
             />
+
+            {renderTooltips[index] && <p className={styles.tooltip}>Max time exceeded!</p>}
           </div>
         );
       })}
