@@ -28,7 +28,6 @@ export default function Week({ id, container }) {
   useEffect(() => {
     weekPos.current =
       weekContainer.current.getBoundingClientRect().top - container.current.getBoundingClientRect().top - 200;
-    console.log(weekPos.current);
   }, []);
 
   function selectThisWeek() {

@@ -29,3 +29,8 @@
 	background: white;
 	z-index: 100;
 }
+
+.currentDay {
+	/* cool flashy amazing ultra wow style for current day */
+	font-size: 35px;
+}
