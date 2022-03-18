@@ -33,7 +33,6 @@ export default function BarGraph({ mode, weekId, setSelectedDay }) {
 
   const fullTimeHue = 126;
   const emptyTimeHue = 1;
-  const noTimeColor = "rgb(88, 88, 88)";
 
   // JSX
   return (
@@ -78,8 +77,8 @@ export default function BarGraph({ mode, weekId, setSelectedDay }) {
                 background:
                   rateBarHeight < barPercent * 100
                     ? `linear-gradient(180deg,
-											rgba(36, 219, 54, 1) ${dailyRate * ovfScaleFactor}px,
-											rgba(57, 184, 255, 1) ${dailyRate * ovfScaleFactor}px)`
+											rgba(36, 219, 54, 1) ${(dailyRate || 100) * ovfScaleFactor}px,
+											rgba(57, 184, 255, 1) ${(dailyRate || 100) * ovfScaleFactor}px)`
                     : `hsl(${barHue}, 72%, 50%)`,
               }}
             ></div>

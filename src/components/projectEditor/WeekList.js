@@ -12,7 +12,6 @@ export default function WeekList() {
   const weeksContainer = useRef(null);
 
   const dayIndex = new Date().getDay();
-	console.log(dayIndex)
 
   return (
     <div ref={weeksContainer} className={styles.container}>
