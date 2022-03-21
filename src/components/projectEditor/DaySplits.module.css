@@ -54,7 +54,6 @@
 .tooltip {
 	position: absolute;
 	bottom: -35px;
-
-	width: 100%;
+	
 	text-align: center;
 }
