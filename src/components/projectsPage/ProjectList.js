@@ -1,5 +1,6 @@
 import { useSelector } from "react-redux";
-import Project from "./Project";
+
+import Project from "./Project.js";
 
 export default function ProjectList() {
   const projectIds = useSelector((state) => Object.keys(state.projects));
@@ -7,7 +8,7 @@ export default function ProjectList() {
   return (
     <div>
       {projectIds.map((projectId, index) => (
-        <Project key={index} projectId={projectId} />
+        <Project projectId={projectId} key={index} />
       ))}
     </div>
   );

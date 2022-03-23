@@ -1,0 +1,4 @@
+.link, .link:link, .link:active, .link:hover {
+	text-decoration: none;
+	color: black;
+}
