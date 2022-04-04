@@ -1,5 +1,6 @@
-import { nanoid } from "nanoid";
 import { useState } from "react";
+import produce from "immer";
+import { nanoid } from "nanoid";
 
 export default function projectsReducer(state = {}, action) {
   switch (action.type) {
@@ -7,9 +8,8 @@ export default function projectsReducer(state = {}, action) {
       const today = new Date();
       const startDate = `${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate()}`;
 
-      return {
-        ...state,
-        [nanoid()]: {
+      return produce(state, (draft) => {
+        draft[nanoid()] = {
           title: action.payload.title,
           themeColor: action.payload.themeColor,
           bannerImage: action.payload.bannerImage,
@@ -24,139 +24,119 @@ export default function projectsReducer(state = {}, action) {
           weeks: {
             [nanoid()]: [[], [], [], [], [], [], []],
           },
-        },
-      };
+        };
+      });
     }
 
     case "EDIT_PROJECT": {
-      return {
-        ...state,
-        [action.payload.projectId]: {
-          ...state[action.payload.projectId],
+      return produce(state, (draft) => {
+        draft[action.payload.projectId] = {
           title: action.payload.title,
           themeColor: action.payload.themeColor,
           bannerImage: action.payload.bannerImage,
           deadline: action.payload.deadline,
           hourGoal: action.payload.hourGoal,
-        },
-      };
+        };
+      });
     }
 
     case "EDIT_DATES": {
-      return {
-        ...state,
-        [action.payload.projectId]: {
-          ...state[action.payload.projectId],
+      return produce(state, (draft) => {
+        draft[action.payload.projectId].startDate =
+          action.payload.startDate === null
+            ? state[action.payload.projectId].startDate
+            : action.payload.startDate;
 
-          startDate:
-            action.payload.startDate === null
-              ? state[action.payload.projectId].startDate
-              : action.payload.startDate,
-
-          dateLastOpened:
-            action.payload.dateLastOpened === null
-              ? state[action.payload.projectId].dateLastOpened
-              : action.payload.dateLastOpened,
-        },
-      };
+        draft[action.payload.projectId].dateLastOpened =
+          action.payload.dateLastOpened === null
+            ? state[action.payload.projectId].dateLastOpened
+            : action.payload.dateLastOpened;
+      });
     }
 
     case "DELETE_PROJECT": {
-      const newState = {};
-
-      const projectIds = Object.keys(state);
-      for (let projectId of projectIds) {
-        if (projectId !== action.payload.projectId) {
-          newState[projectId] = { ...state[projectId] };
+      return produce(state, (draft) => {
+        for (let projectId in state) {
+          if (projectId === action.payload.projectId) {
+            delete draft[projectId];
+            break;
+          }
         }
-      }
-
-      return newState;
+      });
     }
 
     case "ADD_WEEK": {
-      const newWeek = [
-        JSON.parse(JSON.stringify(action.payload.defaultWeekSplits)),
-        JSON.parse(JSON.stringify(action.payload.defaultWeekSplits)),
-        JSON.parse(JSON.stringify(action.payload.defaultWeekSplits)),
-        JSON.parse(JSON.stringify(action.payload.defaultWeekSplits)),
-        JSON.parse(JSON.stringify(action.payload.defaultWeekSplits)),
-        JSON.parse(JSON.stringify(action.payload.defaultWeekSplits)),
-        JSON.parse(JSON.stringify(action.payload.defaultWeekSplits)),
-      ];
+      const defaultWeekSplits = state[action.payload.projectId].projectSplits.map((split) => ({
+        name: split.name,
+        time: 0,
+      }));
 
-      return {
-        ...state,
-        [action.payload.projectId]: {
-          ...state[action.payload.projectId],
-          weeks: {
-						[nanoid()]: newWeek,
-            ...state[action.payload.projectId].weeks,
-          },
-        },
-      };
+      return produce(state, (draft) => {
+        draft[action.payload.projectId].weeks[nanoid()] = [
+          [...defaultWeekSplits],
+          [...defaultWeekSplits],
+          [...defaultWeekSplits],
+          [...defaultWeekSplits],
+          [...defaultWeekSplits],
+          [...defaultWeekSplits],
+          [...defaultWeekSplits],
+        ];
+      });
     }
 
     case "SET_TOTAL_TIME": {
-      return {
-        ...state,
-        [action.payload.projectId]: {
-          ...state[action.payload.projectId],
-          totalTime: action.payload.time,
-        },
-      };
+      return produce(state, (draft) => {
+        draft[action.payload.projectId].totalTime = action.payload.time;
+      });
     }
 
     case "ADD_SPLIT": {
-      const newState = JSON.parse(JSON.stringify(state));
+      return produce(state, (draft) => {
+        draft[action.payload.projectId].projectSplits.push({
+          name: action.payload.splitName,
+          color: action.payload.splitColor,
+        });
 
-      newState[action.payload.projectId].projectSplits.push({
-        name: action.payload.splitName,
-        color: action.payload.splitColor,
+        for (let weekId in state[action.payload.projectId].weeks) {
+          draft[action.payload.projectId].weeks[weekId] = state[action.payload.projectId].weeks[weekId].map(
+            (daySplits) => [...daySplits, { name: action.payload.splitName, time: 0 }]
+          );
+        }
       });
-
-      for (let weekId in newState[action.payload.projectId].weeks) {
-        newState[action.payload.projectId].weeks[weekId] = newState[action.payload.projectId].weeks[
-          weekId
-        ].map((daySplits) => [...daySplits, { name: action.payload.splitName, time: 0 }]);
-      }
-
-      return newState;
     }
 
     case "DELETE_SPLIT": {
-      const newState = JSON.parse(JSON.stringify(state));
+      return produce(state, (draft) => {
+        draft[action.payload.projectId].projectSplits = state[action.payload.projectId].projectSplits.filter(
+          (split) => split.name !== action.payload.splitName
+        );
 
-      newState[action.payload.projectId].projectSplits = newState[
-        action.payload.projectId
-      ].projectSplits.filter((split) => split.name !== action.payload.splitName);
-
-      for (let weekId in newState[action.payload.projectId].weeks) {
-        newState[action.payload.projectId].weeks[weekId].forEach((day, index) => {
-          newState[action.payload.projectId].weeks[weekId][index] = day.filter(
-            (split) => split.name !== action.payload.splitName
-          );
-        });
-      }
-
-      return newState;
+        for (let weekId in state[action.payload.projectId].weeks) {
+          state[action.payload.projectId].weeks[weekId].forEach((day, index) => {
+            draft[action.payload.projectId].weeks[weekId][index] = day.filter(
+              (split) => split.name !== action.payload.splitName
+            );
+          });
+        }
+      });
     }
 
     case "SET_DAY_SPLIT_TIME": {
-      const newState = { ...state };
+      return produce(state, (draft) => {
+        state[action.payload.projectId].weeks[action.payload.weekId][action.payload.dayIndex].forEach(
+          (split, index) => {
+            if (split.name !== action.payload.splitName) return;
 
-      newState[action.payload.projectId].weeks[action.payload.weekId][action.payload.dayIndex].forEach(
-        (split) => {
-          if (split.name !== action.payload.splitName) return;
-          split.time = action.payload.time;
-        }
-      );
-
-      return newState;
+            draft[action.payload.projectId].weeks[action.payload.weekId][action.payload.dayIndex][
+              index
+            ].time = action.payload.time;
+          }
+        );
+      });
     }
 
     default: {
-      return { ...state };
+      return produce(state, (draft) => {});
     }
   }
 }
