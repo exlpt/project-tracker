@@ -20,7 +20,7 @@ export default function AddEditProject() {
     hourGoal: 0,
     title: "Untitled Project",
     background: "",
-    projectTheme: "#000000",
+    projectTheme: "#57FF3D",
   });
 
   useEffect(() => {
@@ -34,7 +34,7 @@ export default function AddEditProject() {
         background: project.bannerImage,
         projectTheme: project.themeColor,
       }));
-  }, [projectId]);
+  }, [projectId, mode]);
 
 	function setFormToDefault() {
 		setFormData({
@@ -44,7 +44,7 @@ export default function AddEditProject() {
 			hourGoal: 0,
 			title: "Untitled Project",
 			background: "",
-			projectTheme: "#000000",
+			projectTheme: "#57FF3D",
 		});
 	}
 
@@ -113,7 +113,7 @@ export default function AddEditProject() {
           <input
             type="date"
             name="deadline"
-            value={formData.deadline}
+            value={formData.deadline || "2022-01-01"}
             onChange={updateForm}
           />
         </label>
@@ -129,7 +129,7 @@ export default function AddEditProject() {
           <input
             type="number"
             name="hourGoal"
-            value={formData.hourGoal}
+            value={formData.hourGoal || 0}
             onChange={updateForm}
           />
         </label>

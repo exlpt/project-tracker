@@ -21,7 +21,7 @@ export default function ProjectEditorPage() {
   const hourGoal = project.hourGoal;
   const totalTime = project.totalTime;
   const dailyTimeRequired =
-    Math.round((hourGoal && deadline ? (hourGoal - totalTime) / daysLeft : null) * 100) / 100;
+    hourGoal && deadline ? Math.round(((hourGoal - totalTime) / daysLeft) * 100) / 100 : null;
 
   // Add any weeks that need to be added since last time project was opened
   // Set dateLastOpened to today
@@ -64,7 +64,7 @@ export default function ProjectEditorPage() {
       <Timer />
 
       <h2>Hour goal -</h2>
-      <h3>{project.hourGoal ? project.hourGoal : "- - -"}</h3>
+      <h3>{project.hourGoal ? project.hourGoal : ""}</h3>
       {dailyTimeRequired && (
         <div>
           <h2>Daily time required -</h2>

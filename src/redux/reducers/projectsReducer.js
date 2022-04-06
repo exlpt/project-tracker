@@ -19,10 +19,18 @@ export default function projectsReducer(state = {}, action) {
           totalTime: 0,
           dateLastOpened: startDate,
 
-          projectSplits: [],
+          projectSplits: [{ name: "Main", color: "#FF172E" }],
 
           weeks: {
-            [nanoid()]: [[], [], [], [], [], [], []],
+            [nanoid()]: [
+              [{ name: "Main", time: 0 }],
+              [{ name: "Main", time: 0 }],
+              [{ name: "Main", time: 0 }],
+              [{ name: "Main", time: 0 }],
+              [{ name: "Main", time: 0 }],
+              [{ name: "Main", time: 0 }],
+              [{ name: "Main", time: 0 }],
+            ],
           },
         };
       });
@@ -30,13 +38,11 @@ export default function projectsReducer(state = {}, action) {
 
     case "EDIT_PROJECT": {
       return produce(state, (draft) => {
-        draft[action.payload.projectId] = {
-          title: action.payload.title,
-          themeColor: action.payload.themeColor,
-          bannerImage: action.payload.bannerImage,
-          deadline: action.payload.deadline,
-          hourGoal: action.payload.hourGoal,
-        };
+        draft[action.payload.projectId].title = action.payload.title;
+        draft[action.payload.projectId].themeColor = action.payload.themeColor;
+        draft[action.payload.projectId].bannerImage = action.payload.bannerImage;
+        draft[action.payload.projectId].deadline = action.payload.deadline;
+        draft[action.payload.projectId].hourGoal = action.payload.hourGoal;
       });
     }
 

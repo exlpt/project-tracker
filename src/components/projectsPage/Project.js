@@ -14,7 +14,7 @@ export default function Project(props) {
 
   function deleteThisProject() {
     dispatch(projectsActions.deleteProject(props.projectId));
-		dispatch(addEditProjectActions.setProject(null));
+		dispatch(addEditProjectActions.setMode("add"));
   }
 	
 	function setAddEditProjectProjectId() {

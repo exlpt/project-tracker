@@ -3,22 +3,22 @@ import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 
 export default function Timer() {
-  const projectId = useSelector(
-    (state) => state.projectEditor.currentProjectId
-  );
+  const projectId = useSelector((state) => state.projectEditor.currentProjectId);
   const deadline = useSelector((state) =>
     Math.floor(new Date(state.projects[projectId].deadline).getTime() / 1000)
   );
 
   const today = new Date();
-  const [currentDate, setCurrentDate] = useState(
-    Math.floor(today.getTime() / 1000) - 1
-  );
+  const [currentDate, setCurrentDate] = useState(Math.floor(today.getTime() / 1000) - 1);
 
   useEffect(() => {
-    setTimeout(() => {
+    const timeoutId = setTimeout(() => {
       setCurrentDate(Math.floor(today.getTime() / 1000));
     }, 1000);
+
+    return () => {
+      clearTimeout(timeoutId);
+    };
   });
 
   const diffSeconds = deadline - currentDate;

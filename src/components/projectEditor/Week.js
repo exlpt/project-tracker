@@ -22,27 +22,34 @@ export default function Week({ id, container }) {
 
   const [selectedDay, setSelectedDay] = useState(0);
   const weekContainer = useRef(null);
-  let weekPos = useRef(null);
+  const [weekPos, setWeekPos] = useState(null);
 
-	// Calculate position in parent container
+  // Calculate position in parent container
   useEffect(() => {
-    weekPos.current =
-      weekContainer.current.getBoundingClientRect().top - container.current.getBoundingClientRect().top - 200;
+    setWeekPos(
+      weekContainer.current.getBoundingClientRect().top - container.current.getBoundingClientRect().top - 200
+    );
   }, []);
 
   function selectThisWeek() {
     dispatch(setWeekId(id));
 
     // Auto scroll
-    container.current.scrollTo({ top: weekPos.current, left: 0, behavior: "smooth" });
+    container.current.scrollTo({ top: weekPos, left: 0, behavior: "smooth" });
   }
 
   return (
     <div onClick={selectThisWeek} ref={weekContainer} className={styles.container}>
       <p className={styles.startDate}>{weekStartDate.toString().slice(4, 10)}</p>
       <p className={styles.endDate}>{weekEndDate.toString().slice(4, 10)}</p>
-      <BarGraph mode={selectedWeek && weekPos.current ? "active" : "inactive"} weekId={id} setSelectedDay={setSelectedDay} />
-      {selectedWeek && weekPos.current && <DaySplits weekId={id} selectedDay={selectedDay} weekListRef={container} />}
+      <BarGraph
+        mode={selectedWeek && weekPos ? "active" : "inactive"}
+        weekId={id}
+        setSelectedDay={setSelectedDay}
+      />
+      {selectedWeek && weekPos && (
+        <DaySplits weekId={id} selectedDay={selectedDay} weekListRef={container} />
+      )}
     </div>
   );
 }
