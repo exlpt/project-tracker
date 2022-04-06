@@ -1,0 +1,12 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+html, body, div[id="root"] {
+	margin: 0;
+	padding: 0;
+
+	overflow: hidden;
+}

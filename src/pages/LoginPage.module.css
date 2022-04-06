@@ -1,0 +1,146 @@
+.container {
+  background: linear-gradient(103.12deg, #322f39 4.52%, #1a1722 95.1%);
+
+  margin: 0;
+  position: absolute;
+	z-index: -2;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.loginText {
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 4rem;
+  color: #c0e5ff;
+
+  margin: 25px;
+
+  user-select: none;
+}
+
+.form {
+	position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 760px;
+  height: 255px;
+
+  background: rgba(192, 229, 255, 0.04);
+  box-shadow: 16px 15px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 25px;
+}
+
+.formFeild {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: 5px 0;
+
+  width: 90%;
+}
+
+.formFeildLabel {
+  font-family: Inter;
+  font-weight: 200;
+  font-size: 36px;
+  color: #ffffff;
+
+  user-select: none;
+
+  margin: 5px;
+}
+
+.formFeildValue {
+  width: 488px;
+  height: 60px;
+
+  border-radius: 25px;
+
+  border: none;
+
+  font-family: Inter;
+  font-weight: 300;
+  font-size: 24px;
+
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+
+  color: #ffffff;
+
+  transition: 0.2s;
+}
+
+.formFeildValue:focus {
+  border: none;
+  outline: none;
+
+  background: rgba(224, 246, 255, 0.217);
+}
+
+.formFeildValue_username {
+  background: rgba(192, 255, 221, 0.15);
+}
+
+.formFeildValue_password {
+  background: rgba(246, 255, 192, 0.18);
+}
+
+::-ms-reveal {
+  display: none;
+}
+
+.loginBtn {
+  margin-top: 20px;
+  width: 150px;
+  height: 40px;
+
+  font-family: Inter;
+  font-weight: 300;
+  font-size: 20px;
+
+  background: rgba(137, 255, 145, 0.5);
+  color: #ffffff;
+
+  border: none;
+  border-radius: 15px;
+
+  transition: 0.15s;
+}
+
+.loginBtn:hover {
+  background: rgba(137, 255, 145, 0.7);
+}
+
+.loginBtn:active {
+  background: rgba(137, 255, 145, 0.6);
+  box-shadow: 3px 2px 5px 0px rgba(0, 0, 0, 0.53) inset;
+}
+
+.blob {
+  content: url("../assets/images/loginPage/blob.png");
+
+	margin: 0;
+	padding: 0;
+
+  position: absolute;
+	bottom: -300px;
+
+	max-width: 1100px;
+
+	z-index: -1;
+
+	-webkit-user-drag: none;
+}

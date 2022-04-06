@@ -1,20 +1,40 @@
+import styles from "./LoginPage.module.css";
+
+import blob from "../assets/images/loginPage/blob.png";
+
 export default function LoginPage() {
   return (
-    <div>
-      <h1>Login</h1>
+    <div className={styles.container}>
+      <h1 className={styles.loginText}>Login</h1>
 
-      <form onSubmit={(event) => event.preventDefault()}>
-        <label for="login--username">
-					Username
-          <input type="text" placeholder="john_doe" id="login--username" />
-        </label>
+      <form onSubmit={(event) => event.preventDefault()} className={styles.form}>
+        <div className={styles.formFeild}>
+          <label htmlFor="login--username" className={styles.formFeildLabel}>
+            Username:
+          </label>
+          <input
+            type="text"
+            placeholder="john_doe"
+            id="login--username"
+            className={`${styles.formFeildValue} + ${styles.formFeildValue_username}`}
+          />
+        </div>
 
-        <label for="login--password">
-					Password
-          <input type="text" placeholder="••••••••••" id="login--password" />
-        </label>
+        <div className={styles.formFeild}>
+          <label htmlFor="login--password" className={styles.formFeildLabel}>
+            Password:
+          </label>
+          <input
+            type="password"
+            placeholder="••••••••••"
+            id="login--password"
+            className={`${styles.formFeildValue} ${styles.formFeildValue_password}`}
+          />
+        </div>
 
-        <button>Login</button>
+        <button className={styles.loginBtn}>Login</button>
+
+				<img src={blob} className={styles.blob} />
       </form>
     </div>
   );
