@@ -41,7 +41,7 @@
   border-radius: 25px;
 }
 
-.formFeild {
+.form__feild {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -51,7 +51,7 @@
   width: 90%;
 }
 
-.formFeildLabel {
+.form__feildLabel {
   font-family: Inter;
   font-weight: 200;
   font-size: 36px;
@@ -62,7 +62,7 @@
   margin: 5px;
 }
 
-.formFeildValue {
+.form__feildValue {
   width: 488px;
   height: 60px;
 
@@ -83,18 +83,18 @@
   transition: 0.2s;
 }
 
-.formFeildValue:focus {
+.form__feildValue:focus {
   border: none;
   outline: none;
 
   background: rgba(224, 246, 255, 0.217);
 }
 
-.formFeildValue_username {
+.form__feildValueUsername {
   background: rgba(192, 255, 221, 0.15);
 }
 
-.formFeildValue_password {
+.form__feildValuePassword {
   background: rgba(246, 255, 192, 0.18);
 }
 

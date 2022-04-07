@@ -8,27 +8,27 @@ export default function LoginPage() {
       <h1 className={styles.loginText}>Login</h1>
 
       <form onSubmit={(event) => event.preventDefault()} className={styles.form}>
-        <div className={styles.formFeild}>
-          <label htmlFor="login--username" className={styles.formFeildLabel}>
+        <div className={styles.form__feild}>
+          <label htmlFor="login--username" className={styles.form__feildLabel}>
             Username:
           </label>
           <input
             type="text"
             placeholder="john_doe"
             id="login--username"
-            className={`${styles.formFeildValue} + ${styles.formFeildValue_username}`}
+            className={`${styles.form__feildValue} + ${styles.form__feildValueUsername}`}
           />
         </div>
 
-        <div className={styles.formFeild}>
-          <label htmlFor="login--password" className={styles.formFeildLabel}>
+        <div className={styles.form__feild}>
+          <label htmlFor="login--password" className={styles.form__feildLabel}>
             Password:
           </label>
           <input
             type="password"
             placeholder="••••••••••"
             id="login--password"
-            className={`${styles.formFeildValue} ${styles.formFeildValue_password}`}
+            className={`${styles.form__feildValue} ${styles.form__feildValuePassword}`}
           />
         </div>
 
