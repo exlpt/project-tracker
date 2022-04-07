@@ -1,0 +1,51 @@
+.container {
+  background: linear-gradient(103.12deg, #392f33 4.52%, #22171e 95.1%);
+
+  width: 100vw;
+  height: 100vh;
+
+  padding: 20px 40px;
+}
+
+.profileContainer {
+  width: min-content;
+  height: 80px;
+
+  background: rgba(24, 24, 24, 0.84);
+  border-radius: 1000px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding-left: 7px;
+  padding-right: 18px;
+	margin: 0;
+}
+
+.profileContainer__pfp {
+  margin-right: 5px;
+}
+
+.profileContainer__username {
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 30px;
+  letter-spacing: 0.08em;
+  color: #ececec;
+}
+
+.mainText {
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 60px;
+  color: #ececec;
+
+	position: absolute;
+	width: fit-content;
+	height: fit-content;
+	margin: 0 auto;
+	top: 23.5px;
+	left: 0;
+	right: 0;
+}

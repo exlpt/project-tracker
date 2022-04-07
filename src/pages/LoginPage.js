@@ -16,7 +16,8 @@ export default function LoginPage() {
             type="text"
             placeholder="john_doe"
             id="login--username"
-            className={`${styles.form__feildValue} + ${styles.form__feildValueUsername}`}
+						spellcheck="false"
+            className={`${styles.formFeildValue} + ${styles.formFeildValue_username}`}
           />
         </div>
 
@@ -34,7 +35,7 @@ export default function LoginPage() {
 
         <button className={styles.loginBtn}>Login</button>
 
-				<img src={blob} className={styles.blob} />
+				<img src={blob} className={styles.blob} alt="" />
       </form>
     </div>
   );
