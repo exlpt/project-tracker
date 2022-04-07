@@ -4,6 +4,8 @@ import { useSelector, useDispatch } from "react-redux";
 import * as projectsActions from "../../redux/actionCreators/projectsActionCreators.js";
 import * as addEditProjectActions from "../../redux/actionCreators/addEditProjectActionCreators.js";
 
+import styles from "./AddEditProject.module.css";
+
 export default function AddEditProject() {
   const dispatch = useDispatch();
 
@@ -99,7 +101,7 @@ export default function AddEditProject() {
   }
 
   return (
-    <div>
+    <div className={styles.container}>
       <h1>{mode === "edit" ? "Edit Project" : "Add Project"}</h1>
       <form onSubmit={mode === "edit" ? editProject : addProject}>
         <input

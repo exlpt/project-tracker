@@ -1,0 +1,13 @@
+.container {
+  width: 450px;
+
+  background: rgba(192, 229, 255, 0.04);
+  box-shadow: 16px 15px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 25px;
+
+	margin-right: 70px;
+
+	position: absolute;
+	bottom: 0;
+	top: 0;
+}

@@ -49,3 +49,11 @@
 	left: 0;
 	right: 0;
 }
+
+.contentContainer {
+	position: absolute;
+	bottom: 50px;
+	top: 130px;
+	right: 40px;
+	left: 40px;
+}
