@@ -11,9 +11,7 @@ export default function AddEditProject() {
 
   const mode = useSelector((state) => state.addEditProject.mode);
   const projectId = useSelector((state) => state.addEditProject.projectId);
-  const project = useSelector((state) =>
-    projectId ? state.projects[projectId] : null
-  );
+  const project = useSelector((state) => (projectId ? state.projects[projectId] : null));
 
   const [formData, setFormData] = useState({
     deadlineEnabled: false,
@@ -38,17 +36,17 @@ export default function AddEditProject() {
       }));
   }, [projectId, mode]);
 
-	function setFormToDefault() {
-		setFormData({
-			deadlineEnabled: false,
-			deadline: "2022-01-01",
-			hourGoalEnabled: false,
-			hourGoal: 0,
-			title: "Untitled Project",
-			background: "",
-			projectTheme: "#57FF3D",
-		});
-	}
+  function setFormToDefault() {
+    setFormData({
+      deadlineEnabled: false,
+      deadline: "2022-01-01",
+      hourGoalEnabled: false,
+      hourGoal: 0,
+      title: "Untitled Project",
+      background: "",
+      projectTheme: "#57FF3D",
+    });
+  }
 
   function addProject(event) {
     event.preventDefault();
@@ -63,7 +61,7 @@ export default function AddEditProject() {
       )
     );
 
-		setFormToDefault();
+    setFormToDefault();
   }
 
   function editProject(event) {
@@ -82,9 +80,9 @@ export default function AddEditProject() {
       );
 
     dispatch(addEditProjectActions.setMode("add"));
-		dispatch(addEditProjectActions.setProject(null));
+    dispatch(addEditProjectActions.setProject(null));
 
-		setFormToDefault();
+    setFormToDefault();
   }
 
   function updateForm(event) {
@@ -97,19 +95,23 @@ export default function AddEditProject() {
 
   function cancelEdit() {
     dispatch(addEditProjectActions.setMode("add"));
-		setFormToDefault();
+    setFormToDefault();
   }
 
   return (
     <div className={styles.container}>
-      <h1>{mode === "edit" ? "Edit Project" : "Add Project"}</h1>
-      <form onSubmit={mode === "edit" ? editProject : addProject}>
-        <input
-          type="checkbox"
-          name="deadlineEnabled"
-          checked={formData.deadlineEnabled}
-          onChange={updateForm}
-        />
+      <h1 className={styles.mainText}>{mode === "edit" ? "Edit Project" : "Add Project"}</h1>
+      <form onSubmit={mode === "edit" ? editProject : addProject} className={styles.form}>
+        <div className={styles.form__checkboxContainer}>
+          <input
+            type="checkbox"
+            name="deadlineEnabled"
+            checked={formData.deadlineEnabled}
+            onChange={updateForm}
+          />
+					<span className={styles.form__checkbox}></span>
+        </div>
+
         <label>
           Deadline
           <input
@@ -120,51 +122,29 @@ export default function AddEditProject() {
           />
         </label>
 
-        <input
-          type="checkbox"
-          name="hourGoalEnabled"
-          checked={formData.hourGoalEnabled}
-          onChange={updateForm}
-        />
+        <div className={styles.form__checkboxContainer}>
+          <input
+            type="checkbox"
+            name="hourGoalEnabled"
+            checked={formData.hourGoalEnabled}
+            onChange={updateForm}
+          />
+          <span className={styles.form__checkbox}></span>
+        </div>
+
         <label>
           Hour goal
-          <input
-            type="number"
-            name="hourGoal"
-            value={formData.hourGoal || 0}
-            onChange={updateForm}
-          />
+          <input type="number" name="hourGoal" value={formData.hourGoal || 0} onChange={updateForm} />
         </label>
 
-        <label>
-          Title
-          <input
-            type="text"
-            name="title"
-            value={formData.title}
-            onChange={updateForm}
-          />
-        </label>
+        <label>Title</label>
+        <input type="text" name="title" value={formData.title} onChange={updateForm} />
 
-        <label>
-          Background
-          <input
-            type="file"
-            name="background"
-            value={formData.background}
-            onChange={updateForm}
-          />
-        </label>
+        <label>Background</label>
+        <input type="file" name="background" value={formData.background} onChange={updateForm} />
 
-        <label>
-          Project theme
-          <input
-            type="color"
-            name="projectTheme"
-            value={formData.projectTheme}
-            onChange={updateForm}
-          />
-        </label>
+        <label>Project theme</label>
+        <input type="color" name="projectTheme" value={formData.projectTheme} onChange={updateForm} />
 
         <button>{mode === "edit" ? "Save" : "Add"}</button>
         {mode === "edit" && <button onClick={cancelEdit}>Cancel</button>}
