@@ -81,19 +81,19 @@ input[type="checkbox"] {
 	position: absolute;
 	top: 20%;
 	bottom: 20%;
-	left: 20%;
-	right: 20%;
-
+	left: 100%;
+	right: -60%;
+	
 	z-index: 0;
-
-	transition: 0.25s ease-out;
-
+	
+	transition: 0.25s ease-in;
+	
 	content: url("../../assets/images/projectsPage/check.svg");
 }
 
 input[type="checkbox"]:checked + .form__checkbox::after {
-	left: 100%;
-	right: -60%;
-
-	transition: 0.25s ease-in;
+	left: 20%;
+	right: 20%;
+	
+	transition: 0.25s ease-out;
 }
