@@ -86,10 +86,10 @@ export default function AddEditProject() {
   }
 
   function updateForm(event) {
-    const { value, checked, type, name } = event.target;
+    const { value, checked, files, type, name } = event.target;
     setFormData((prev) => ({
       ...prev,
-      [name]: type === "checkbox" ? checked : value,
+      [name]: type === "checkbox" ? checked : type === "file" ? files[0] : value,
     }));
   }
 
@@ -101,18 +101,18 @@ export default function AddEditProject() {
   return (
     <div className={styles.container}>
       <h1 className={styles.mainText}>{mode === "edit" ? "Edit Project" : "Add Project"}</h1>
-      <form onSubmit={mode === "edit" ? editProject : addProject} className={styles.form}>
-        <div className={styles.form__checkboxContainer}>
-          <input
-            type="checkbox"
-            name="deadlineEnabled"
-            checked={formData.deadlineEnabled}
-            onChange={updateForm}
-          />
-					<span className={styles.form__checkbox}></span>
-        </div>
 
+      <form onSubmit={mode === "edit" ? editProject : addProject} className={styles.form}>
         <label>
+          <div className={`${styles.form__checkboxContainer} ${styles.form__checkboxContainer_inLabel}`}>
+            <input
+              type="checkbox"
+              name="deadlineEnabled"
+              checked={formData.deadlineEnabled}
+              onChange={updateForm}
+            />
+            <span className={styles.form__checkbox}></span>
+          </div>
           Deadline
           <input
             type="date"
@@ -122,32 +122,43 @@ export default function AddEditProject() {
           />
         </label>
 
-        <div className={styles.form__checkboxContainer}>
-          <input
-            type="checkbox"
-            name="hourGoalEnabled"
-            checked={formData.hourGoalEnabled}
-            onChange={updateForm}
-          />
-          <span className={styles.form__checkbox}></span>
-        </div>
-
         <label>
+          <div className={`${styles.form__checkboxContainer} ${styles.form__checkboxContainer_inLabel}`}>
+            <input
+              type="checkbox"
+              name="hourGoalEnabled"
+              checked={formData.hourGoalEnabled}
+              onChange={updateForm}
+            />
+            <span className={styles.form__checkbox}></span>
+          </div>
           Hour goal
           <input type="number" name="hourGoal" value={formData.hourGoal || 0} onChange={updateForm} />
         </label>
 
-        <label>Title</label>
-        <input type="text" name="title" value={formData.title} onChange={updateForm} />
+        <label>
+          Title
+          <input type="text" name="title" value={formData.title} onChange={updateForm} />
+        </label>
 
-        <label>Background</label>
-        <input type="file" name="background" value={formData.background} onChange={updateForm} />
+        <label className={styles.form__fileLabel}>
+          Background
+          <input type="file" name="background" onChange={updateForm} />
+        </label>
 
-        <label>Project theme</label>
-        <input type="color" name="projectTheme" value={formData.projectTheme} onChange={updateForm} />
+        <label>
+          Project theme
+          <input type="color" name="projectTheme" value={formData.projectTheme} onChange={updateForm} />
+        </label>
 
-        <button>{mode === "edit" ? "Save" : "Add"}</button>
-        {mode === "edit" && <button onClick={cancelEdit}>Cancel</button>}
+        <div className={styles.form__btns}>
+          <button className={styles.form__btn}>{mode === "edit" ? "Save" : "Add"}</button>
+          {mode === "edit" && (
+            <button onClick={cancelEdit} className={`${styles.form__btn} ${styles.form__btn_cancel}`}>
+              Cancel
+            </button>
+          )}
+        </div>
       </form>
     </div>
   );
