@@ -87,6 +87,7 @@ export default function AddEditProject() {
 
   function updateForm(event) {
     const { value, checked, files, type, name } = event.target;
+    console.log(value);
     setFormData((prev) => ({
       ...prev,
       [name]: type === "checkbox" ? checked : type === "file" ? files[0] : value,
@@ -118,6 +119,7 @@ export default function AddEditProject() {
             type="date"
             name="deadline"
             value={formData.deadline || "2022-01-01"}
+            disabled={!formData.deadlineEnabled}
             onChange={updateForm}
           />
         </label>
@@ -133,7 +135,13 @@ export default function AddEditProject() {
             <span className={styles.form__checkbox}></span>
           </div>
           Hour goal
-          <input type="number" name="hourGoal" value={formData.hourGoal || 0} onChange={updateForm} />
+          <input
+            type="number"
+            name="hourGoal"
+            value={formData.hourGoal || 0}
+            disabled={!formData.hourGoalEnabled}
+            onChange={updateForm}
+          />
         </label>
 
         <label>
